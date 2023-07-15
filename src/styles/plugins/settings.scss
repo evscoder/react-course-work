@@ -1,0 +1,10 @@
+$generate-sprites: false; // true or false
+$breakpoints: (
+  'xs': 375px,
+  'sm': 576px,
+  'sm-tablet': 768px,
+  'md': 992px,
+  'lg-tablet': 1024px,
+  'lg': 1200px,
+  'xl': 1366px
+) !default;

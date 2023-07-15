@@ -1,9 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import welcomeSlice from './welcomeSlice';
 
 export const store = configureStore({
     reducer: {
-        welcomeSlice
     }
 });
 

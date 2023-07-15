@@ -25,27 +25,13 @@ html {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 100%;
-  min-height: 100%;
-  margin: 0;
-  font: 400 1rem/1.5 var(--font-family-default);
-  font-feature-settings: var(--font-feature, normal);
-  font-variant: normal;
-  color: var(--text-color);
-  background-color: var(--white);
-  background-repeat: repeat;
-  background-position: 50% 0;
-  background-size: cover;
-  opacity: 1;
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  }
-
-  &.load {
-    opacity: 1;
-    transition: opacity 0.6s ease-out 0.3s;
-  }
+  min-width: 100%;
+  background-color: var(--c_bg);
+  box-sizing: border-box;
+  font-family: $ff;
+  margin: ($gap * 1.25) 0 0;
+  padding: 0 $gap;
+  overflow-x: hidden;
 }
 
 a,
@@ -88,4 +74,37 @@ svg {
 picture {
   flex-grow: 1;
   border-radius: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+input[type="range"] {
+  margin-left: $gap;
+  transform: rotateZ(-180deg);
+}
+
+input[type="text"] {
+  width: ($btn_h + 2px);
+  height: $btn_h;
+  background-color: transparent;
+  border: 1px solid var(--c_base);
+  box-sizing: border-box;
+  caret-color: var(--c_06);
+  color: var(--c_06);
+  outline: 0;
+  padding: 0 9px 0 11px;
+
+  &:focus {
+    background-color: rgba(#6a6a6a, 25%);
+  }
 }

@@ -1,0 +1,10 @@
+@import "../../styles/plugins";
+
+.frame {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: ($gap * 1.25);
+  margin-bottom: ($gap * 2);
+  margin-left: auto;
+  margin-right: auto;
+}

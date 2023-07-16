@@ -1,0 +1,22 @@
+@import "../../styles/plugins";
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.credit {
+  color: var(--c_border);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: lowercase;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  a {
+    color: rgba(var(--c_border), 0.6);
+    text-decoration: none;
+  }
+}

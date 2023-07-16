@@ -1,6 +1,7 @@
 import './styles/app.scss';
 import Header from "./components/Header/Header";
 import Game from "./components/Game/Game";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <main className={'page-content'}>
         <Game />
       </main>
+      <Footer />
     </div>
   );
 }

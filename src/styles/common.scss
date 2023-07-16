@@ -25,12 +25,14 @@ html {
 }
 
 body {
-  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
   background-color: var(--c_bg);
   box-sizing: border-box;
   font-family: $ff;
-  margin: ($gap * 1.25) 0 0;
-  padding: 0 $gap;
   overflow-x: hidden;
 }
 
@@ -102,4 +104,11 @@ input[type="text"] {
   &:focus {
     background-color: rgba(#6a6a6a, 25%);
   }
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0 15px;
 }

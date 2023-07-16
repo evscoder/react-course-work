@@ -15,3 +15,15 @@
 .giCol {
   padding: 0 15px 30px;
 }
+
+.giList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -15px -30px;
+}
+
+.giListItem {
+  padding: 0 15px 30px;
+}

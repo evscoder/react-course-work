@@ -1,0 +1,51 @@
+@import "../../styles/plugins";
+
+.radio-button {
+  cursor: pointer;
+
+  input {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  &__marker {
+    width: $grid_size;
+    height: $grid_size;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: var(--c_base);
+  }
+
+  &--circle .radio-button__marker {
+    border-radius: 50%;
+  }
+
+  &--triangle .radio-button__marker {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  &--purple .radio-button__marker {
+    background-color: var(--c_01);
+  }
+
+  &--pink .radio-button__marker {
+    background-color: var(--c_02);
+  }
+
+  &--blue .radio-button__marker {
+    background-color: var(--c_03);
+  }
+
+  &--green .radio-button__marker {
+    background-color: var(--c_04);
+  }
+
+  &--yellow .radio-button__marker {
+    background-color: var(--c_05);
+  }
+
+  &--white .radio-button__marker {
+    background-color: var(--c_06);
+  }
+}

@@ -1,10 +1,13 @@
 @import "../../styles/plugins";
 
 .radio-button {
+  display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
 
   input {
     display: inline-block;
+    cursor: pointer;
     vertical-align: middle;
     margin-right: 8px;
   }
@@ -14,6 +17,7 @@
     height: $grid_size;
     display: inline-block;
     vertical-align: middle;
+    line-height: $grid_size;
     background-color: var(--c_base);
   }
 
@@ -47,5 +51,16 @@
 
   &--white .radio-button__marker {
     background-color: var(--c_06);
+  }
+
+  &--emoji .radio-button__marker {
+    background-color: transparent;
+    clip-path: none;
+
+    &::before {
+      content: "😎";
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }

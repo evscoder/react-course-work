@@ -4,9 +4,11 @@ import Button from "../Button/Button";
 import RangeInput from "../RangeInput/RangeInput";
 import RadioButton from "../RadioButton/RadioButton";
 interface Props {
-    children?: React.ReactNode
+    children?: React.ReactNode,
+    onChangeShape?: React.ChangeEventHandler<HTMLInputElement>,
+    onChangeColor?: React.ChangeEventHandler<HTMLInputElement>,
 }
-const GameInterface: FC<Props> = () => {
+const GameInterface: FC<Props> = ({onChangeShape, onChangeColor}) => {
     return (
         <div className={styles['game-interface']}>
             <div className={styles.giRow}>
@@ -25,13 +27,13 @@ const GameInterface: FC<Props> = () => {
                 <div className={styles.giCol}>
                     <ul className={styles.giList}>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'square'} title={'Squared cells'} name={'grid_type'} />
+                            <RadioButton onChange={onChangeShape} id={'square'} type={'square'} title={'Squared cells'} name={'grid_type'} />
                         </li>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'circle'} type={'circle'} title={'Circular cells'} name={'grid_type'} />
+                            <RadioButton onChange={onChangeShape} id={'circle'} type={'circle'} title={'Circular cells'} name={'grid_type'} />
                         </li>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'triangle'} type={'triangle'} title={'Triangular cells'} name={'grid_type'} />
+                            <RadioButton onChange={onChangeShape} id={'triangle'} type={'triangle'} title={'Triangular cells'} name={'grid_type'} />
                         </li>
                     </ul>
                 </div>
@@ -44,25 +46,25 @@ const GameInterface: FC<Props> = () => {
                 <div className={styles.giCol}>
                     <ul className={styles.giList}>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'purple'} color={'purple'} title={'Purple cells'} name={'color_type'} />
+                            <RadioButton onChange={onChangeColor} id={'purple'} color={'purple'} title={'Purple cells'} name={'color_type'} />
                         </li>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'pink'} color={'pink'} title={'Pink cells'} name={'color_type'}/>
+                            <RadioButton onChange={onChangeColor} id={'pink'} color={'pink'} title={'Pink cells'} name={'color_type'}/>
                         </li>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'blue'} color={'blue'} title={'Blue cells'} name={'color_type'} />
+                            <RadioButton onChange={onChangeColor} id={'blue'} color={'blue'} title={'Blue cells'} name={'color_type'} />
                         </li>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'green'} color={'green'} title={'Green cells'} name={'color_type'} />
+                            <RadioButton onChange={onChangeColor} id={'green'} color={'green'} title={'Green cells'} name={'color_type'} />
                         </li>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'yellow'} color={'yellow'} title={'Yellow cells'} name={'color_type'} />
+                            <RadioButton onChange={onChangeColor} id={'yellow'} color={'yellow'} title={'Yellow cells'} name={'color_type'} />
                         </li>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'white'} color={'white'} title={'White cells'} name={'color_type'} />
+                            <RadioButton onChange={onChangeColor} id={'white'} color={'white'} title={'White cells'} name={'color_type'} />
                         </li>
                         <li className={styles.giListItem}>
-                            <RadioButton id={'emoji'} color={'emoji'} title={'Type emoji or character for cells'} name={'color_type'} />
+                            <RadioButton onChange={onChangeColor} id={'emoji'} color={'emoji'} title={'Type emoji or character for cells'} name={'color_type'} />
                         </li>
                     </ul>
                 </div>

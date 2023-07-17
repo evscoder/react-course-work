@@ -1,11 +1,19 @@
-import {FC, MouseEventHandler} from "react";
+import {FC, useRef, useState} from "react";
 import styles from './Shape.module.scss';
+import cn from "clsx";
+
 interface Props {
-    onClick: MouseEventHandler<HTMLTableCellElement>;
+    classNames?: string;
 }
-const Shape: FC<Props> = ({ onClick }) => {
+
+const Shape: FC<Props> = () => {
+    const [active, setActive] = useState(false);
+    const shapeElement = useRef<HTMLTableCellElement>(null);
+    const onClick = () => {
+        setActive(!active);
+    }
     return (
-        <td className={styles['shape']} onClick={onClick}></td>
+        <td ref={shapeElement} className={cn(styles['shape'], active && styles['is-active'])} onClick={onClick}></td>
     );
 };
 

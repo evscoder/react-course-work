@@ -4,26 +4,26 @@ import Button from "../Button/Button";
 import RangeInput from "../RangeInput/RangeInput";
 import RadioButton from "../RadioButton/RadioButton";
 import cn from "clsx";
-import {Colors, Types} from "./types";
+import {Colors, Types} from "../types";
 interface Props {
     children?: React.ReactNode,
     onChangeShape?: React.ChangeEventHandler<HTMLInputElement>,
-    onChangeColor?: React.ChangeEventHandler<HTMLInputElement>,
     color?: Colors,
     type?: Types,
+    onCreate: React.MouseEventHandler<HTMLButtonElement>,
 }
-const GameInterface: FC<Props> = ({onChangeShape, onChangeColor, type, color}) => {
+const GameInterface: FC<Props> = ({onCreate, onChangeShape, type, color}) => {
     return (
         <div className={styles['game-interface']}>
             <div className={styles.giRow}>
                 <div className={styles.giCol}>
-                    <Button title={'Make random alive cells'}>Create</Button>
+                    <Button title={'Make random alive cells'} color={color} onClick={onCreate}>Create</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Start alive cells evolution'}>Evolve</Button>
+                    <Button title={'Start alive cells evolution'} color={color} >Evolve</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Kill all alive cells'}>Reset</Button>
+                    <Button title={'Kill all alive cells'} color={color} >Reset</Button>
                 </div>
                 <div className={styles.giCol}>
                     <RangeInput id={'speedControl'} min={100} max={500} value={'300'} step={1} />
@@ -42,10 +42,10 @@ const GameInterface: FC<Props> = ({onChangeShape, onChangeColor, type, color}) =
                     </ul>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Toggle grid'}>Grid off</Button>
+                    <Button title={'Toggle grid'} color={color} >Grid off</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Toggle mode'}>Light mode</Button>
+                    <Button title={'Toggle mode'} color={color} >Light mode</Button>
                 </div>
                 <div className={styles.giCol}>
                     <ul className={cn(styles.giList, styles.giListColors)}>

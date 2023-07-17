@@ -1,12 +1,12 @@
-
-import Shape from "../Shape/Shape";
-import {FC} from "react";
+import {forwardRef, LegacyRef, ReactNode, useEffect} from "react";
 import styles from './Frame.module.scss';
+import Shape from "../Shape/Shape";
+
 interface Props {
-    onClick?: void
+    status?: "reset" | "active";
 }
 
-const Frame: FC<Props> = () => {
+const Frame = forwardRef<HTMLTableElement, Props>(({status}, frameElement) => {
     const rows: number[] = [];
     const cols: number[] = [];
 
@@ -18,18 +18,14 @@ const Frame: FC<Props> = () => {
         cols.push(col + 1);
     }
 
-    const onClick = () => {
-        //
-    }
-
     return (
-        <table className={styles['frame']}>
+        <table ref={frameElement} data-status={status} className={styles['frame']}>
             {rows.map(() => {
                 return (
                     <tr>
                         {cols.map(() => {
                             return (
-                                <Shape onClick={onClick} />
+                                <Shape />
                             )
                         })}
                     </tr>
@@ -37,5 +33,5 @@ const Frame: FC<Props> = () => {
             })}
         </table>
     )
-}
+})
 export default Frame;

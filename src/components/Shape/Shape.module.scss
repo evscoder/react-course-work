@@ -1,6 +1,7 @@
 @import '../../styles/plugins';
 
 .shape {
+  position: relative;
   width: $grid_size;
   height: $grid_size;
   border: 1px solid var(--c_border);
@@ -24,7 +25,54 @@
     background-color: transparent;
   }
 
-  &.is-alive {
+  &.is-active {
     background-color: var(--c_base);
+
+    [data-shape='circle'] & {
+      border-radius: 50%;
+    }
+
+    [data-shape='triangle'] & {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    [data-color='purple'] & {
+      background-color: var(--c_01);
+    }
+
+    [data-color='pink'] & {
+      background-color: var(--c_02);
+    }
+
+    [data-color='blue'] & {
+      background-color: var(--c_03);
+    }
+
+    [data-color='green'] & {
+      background-color: var(--c_04);
+    }
+
+    [data-color='yellow'] & {
+      background-color: var(--c_05);
+    }
+
+    [data-color='white'] & {
+      background-color: var(--c_06);
+    }
+
+    [data-color='emoji'] & {
+      background-color: transparent;
+      clip-path: none;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: -3px;
+        line-height: 1;
+        content: "😎";
+      }
+    }
   }
 }

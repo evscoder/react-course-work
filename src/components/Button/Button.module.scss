@@ -4,7 +4,7 @@
   height: $btn_h;
   background-color: var(--c_base);
   border: 0;
-  color: var(--c_black);
+  color: #fff;
   cursor: pointer;
   font-family: $ff;
   font-size: 0.95rem;
@@ -18,5 +18,32 @@
 
   &--secondary {
     background-color: transparent;
+  }
+
+  &--purple {
+    background-color: var(--c_01);
+  }
+
+  &--pink {
+    background-color: var(--c_02);
+  }
+
+  &--blue {
+    background-color: var(--c_03);
+  }
+
+  &--green {
+    color: var(--c_black);
+    background-color: var(--c_04);
+  }
+
+  &--yellow {
+    color: var(--c_black);
+    background-color: var(--c_05);
+  }
+
+  &--white {
+    background-color: var(--c_06);
+    color: var(--c_black);
   }
 }

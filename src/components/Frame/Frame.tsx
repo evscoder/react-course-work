@@ -1,4 +1,4 @@
-import {forwardRef, LegacyRef, ReactNode, useEffect} from "react";
+import {forwardRef} from "react";
 import styles from './Frame.module.scss';
 import Shape from "../Shape/Shape";
 

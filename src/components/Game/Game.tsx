@@ -2,6 +2,7 @@ import React, {FC, useRef, useState} from "react";
 import styles from './Game.module.scss';
 import Frame from "../Frame/Frame";
 import Interface from "../Interface/Interface";
+import {bool} from "prop-types";
 
 interface Props {
     title?: string
@@ -12,24 +13,32 @@ const Game: FC<Props> = () => {
     const [color, setColor] = useState<string | undefined>('purple');
     const gameElement = useRef<HTMLDivElement | null>(null);
     const frameElement = useRef<HTMLTableElement | null>(null);
+    const [cellsActive, setCellsActive] = useState<boolean[]>([]);
 
     const onCreate = () => {
         const table = frameElement.current;
-        const cells: NodeListOf<HTMLTableCellElement> = table?.querySelectorAll('td');
+        const cells: NodeListOf<HTMLTableCellElement> = table?.querySelectorAll('div');
         const totalCells: number = cells?.length;
         const maxCells = totalCells * 0.35;
+        const activeCells: boolean[] = [];
+
+        cells.forEach((_, i: number) => {
+            activeCells.push(false);
+        })
 
         const uniqueSet = new Set();
         while (uniqueSet.size < maxCells) {
             const random = Math.floor(Math.random() * totalCells);
             uniqueSet.add(random);
 
-            cells.forEach((el, i) => {
+            cells.forEach((_, i: number) => {
                 if (i === random) {
-                    el.click();
+                    activeCells[i] = true;
                 }
             });
         }
+
+        setCellsActive(activeCells);
     }
 
     const onChangeShape = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +57,7 @@ const Game: FC<Props> = () => {
 
     return (
         <div ref={gameElement} data-shape={'square'} data-color={'purple'} className={styles['game']}>
-            <Frame ref={frameElement} />
+            <Frame ref={frameElement} isElementsActive={cellsActive} />
             <Interface onChangeShape={onChangeShape} type={shape} color={color === 'emoji' ? 'purple' : color} onCreate={onCreate} />
         </div>
     )

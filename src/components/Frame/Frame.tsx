@@ -4,34 +4,24 @@ import Shape from "../Shape/Shape";
 
 interface Props {
     status?: "reset" | "active";
+    isElementsActive: boolean[]
 }
 
-const Frame = forwardRef<HTMLTableElement, Props>(({status}, frameElement) => {
-    const rows: number[] = [];
-    const cols: number[] = [];
+const Frame = forwardRef<HTMLTableElement, Props>(({status, isElementsActive}, frameElement) => {
+    const shapes: number[] = [];
 
-    for (let row = 0; row < 30; row++) {
-        rows.push(row + 1);
-    }
-
-    for (let col = 0; col < 60; col++) {
-        cols.push(col + 1);
+    for (let i = 0; i < (60 * 30); i++) {
+        shapes.push(i + 1);
     }
 
     return (
-        <table ref={frameElement} data-status={status} className={styles['frame']}>
-            {rows.map(() => {
+        <div ref={frameElement} data-status={status} className={styles['frame']}>
+            {shapes.map((_, index: number) => {
                 return (
-                    <tr>
-                        {cols.map(() => {
-                            return (
-                                <Shape />
-                            )
-                        })}
-                    </tr>
+                    <Shape isActive={isElementsActive[index] && true} />
                 );
             })}
-        </table>
+        </div>
     )
 })
 export default Frame;

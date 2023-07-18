@@ -11,8 +11,9 @@ interface Props {
     color?: Colors,
     type?: Types,
     onCreate: React.MouseEventHandler<HTMLButtonElement>,
+    onReset: React.MouseEventHandler<HTMLButtonElement>,
 }
-const GameInterface: FC<Props> = ({onCreate, onChangeShape, type, color}) => {
+const GameInterface: FC<Props> = ({onCreate, onReset, onChangeShape, type, color}) => {
     return (
         <div className={styles['game-interface']}>
             <div className={styles.giRow}>
@@ -23,7 +24,7 @@ const GameInterface: FC<Props> = ({onCreate, onChangeShape, type, color}) => {
                     <Button title={'Start alive cells evolution'} color={color} >Evolve</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Kill all alive cells'} color={color} >Reset</Button>
+                    <Button title={'Kill all alive cells'} color={color} onClick={onReset}>Reset</Button>
                 </div>
                 <div className={styles.giCol}>
                     <RangeInput id={'speedControl'} min={100} max={500} value={'300'} step={1} />

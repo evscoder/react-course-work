@@ -17,12 +17,12 @@ const Game: FC<Props> = () => {
 
     const onCreate = () => {
         const table = frameElement.current;
-        const cells: NodeListOf<HTMLTableCellElement> = table?.querySelectorAll('div');
+        const cells: HTMLDivElement[] = table?.querySelectorAll('div');
         const totalCells: number = cells?.length;
         const maxCells = totalCells * 0.35;
         const activeCells: boolean[] = [];
 
-        cells.forEach((_, i: number) => {
+        cells.forEach(() => {
             activeCells.push(false);
         })
 
@@ -41,6 +41,16 @@ const Game: FC<Props> = () => {
         setCellsActive(activeCells);
     }
 
+    const onReset = () => {
+        const arr: boolean[] = [];
+
+        cellsActive.forEach(() => {
+            arr.push(false);
+        })
+
+        setCellsActive(arr);
+    };
+
     const onChangeShape = (event: React.ChangeEvent<HTMLInputElement>) => {
         const button = event.target;
         const buttonType: string | undefined = button.dataset.type;
@@ -58,7 +68,13 @@ const Game: FC<Props> = () => {
     return (
         <div ref={gameElement} data-shape={'square'} data-color={'purple'} className={styles['game']}>
             <Frame ref={frameElement} isElementsActive={cellsActive} />
-            <Interface onChangeShape={onChangeShape} type={shape} color={color === 'emoji' ? 'purple' : color} onCreate={onCreate} />
+            <Interface
+                onChangeShape={onChangeShape}
+                type={shape}
+                color={color === 'emoji' ? 'purple' : color}
+                onCreate={onCreate}
+                onReset={onReset}
+            />
         </div>
     )
 }

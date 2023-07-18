@@ -7,7 +7,7 @@ interface Props {
     isElementsActive: boolean[]
 }
 
-const Frame = forwardRef<HTMLTableElement, Props>(({status, isElementsActive}, frameElement) => {
+const Frame = forwardRef<HTMLDivElement, Props>(({status, isElementsActive}, frameElement) => {
     const shapes: number[] = [];
 
     for (let i = 0; i < (60 * 30); i++) {

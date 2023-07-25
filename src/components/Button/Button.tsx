@@ -2,7 +2,7 @@ import React, {FC, MouseEventHandler} from "react";
 import styles from './Button.module.scss';
 import cn from 'clsx';
 import {Colors} from "../types";
-interface Props {
+export interface Props {
     title?: string,
     disabled?: boolean,
     onClick?: MouseEventHandler<HTMLButtonElement> | undefined,

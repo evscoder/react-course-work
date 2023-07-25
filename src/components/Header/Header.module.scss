@@ -1,5 +1,7 @@
+@import "../../styles/variables";
+
 .page-header {
   margin-top: auto;
-  color: #fff;
+  color: var(--c_07);
   text-align: center;
 }

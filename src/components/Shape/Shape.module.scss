@@ -5,6 +5,10 @@
   border: 1px solid var(--c_border);
   cursor: pointer;
 
+  [data-grid=off] & {
+    border-color: transparent!important;
+  }
+
   &::before {
     content: "";
     padding-top: 100%;
@@ -55,7 +59,13 @@
     }
 
     [data-color='white'] & {
-      background-color: var(--c_06);
+      [data-mode="dark"] & {
+        background-color: var(--c_white);
+      }
+
+      [data-mode="light"] & {
+        background-color: var(--c_black);
+      }
     }
 
     [data-color='emoji'] & {

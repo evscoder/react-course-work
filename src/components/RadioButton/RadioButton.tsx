@@ -2,7 +2,7 @@ import React, {FC} from "react";
 import styles from './RadioButton.module.scss';
 import cn from 'clsx';
 import {Colors, Types} from "../types";
-interface Props {
+export interface Props {
     id: string,
     title?: string,
     color?: Colors,

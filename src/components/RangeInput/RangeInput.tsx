@@ -1,10 +1,10 @@
 import {FC} from "react";
 import styles from './RangeInput.module.scss';
-interface Props {
+export interface Props {
     id?: string,
     min: number,
     max: number,
-    value: string,
+    value?: string,
     step: number,
     name?: string,
     title?: string,

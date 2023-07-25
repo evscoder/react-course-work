@@ -50,7 +50,13 @@
   }
 
   &--white .radio-button__marker {
-    background-color: var(--c_06);
+    [data-mode="dark"] & {
+      background-color: var(--c_white);
+    }
+
+    [data-mode="light"] & {
+      background-color: var(--c_black);
+    }
   }
 
   &--emoji .radio-button__marker {

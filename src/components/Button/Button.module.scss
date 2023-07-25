@@ -43,7 +43,14 @@
   }
 
   &--white {
-    background-color: var(--c_06);
-    color: var(--c_black);
+    [data-mode="dark"] & {
+      background-color: var(--c_white);
+      color: var(--c_black);
+    }
+
+    [data-mode="light"] & {
+      background-color: var(--c_black);
+      color: var(--c_white);
+    }
   }
 }

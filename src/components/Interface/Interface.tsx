@@ -6,14 +6,18 @@ import RadioButton from "../RadioButton/RadioButton";
 import cn from "clsx";
 import {Colors, Types} from "../types";
 interface Props {
+    isStateTheme: boolean,
+    isStateGrid: boolean,
     children?: React.ReactNode,
     onChangeShape?: React.ChangeEventHandler<HTMLInputElement>,
     color?: Colors,
     type?: Types,
     onCreate: React.MouseEventHandler<HTMLButtonElement>,
     onReset: React.MouseEventHandler<HTMLButtonElement>,
+    onChangeTheme: React.MouseEventHandler<HTMLButtonElement>,
+    onChangeGrid: React.MouseEventHandler<HTMLButtonElement>,
 }
-const GameInterface: FC<Props> = ({onCreate, onReset, onChangeShape, type, color}) => {
+const GameInterface: FC<Props> = ({isStateGrid, isStateTheme, onCreate, onReset, onChangeShape, onChangeTheme, onChangeGrid, type, color}) => {
     return (
         <div className={styles['game-interface']}>
             <div className={styles.giRow}>
@@ -43,10 +47,10 @@ const GameInterface: FC<Props> = ({onCreate, onReset, onChangeShape, type, color
                     </ul>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Toggle grid'} color={color} >Grid off</Button>
+                    <Button title={'Toggle grid'} color={color} onClick={onChangeGrid} >Grid {isStateGrid ? 'on' : 'off'}</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Toggle mode'} color={color} >Light mode</Button>
+                    <Button title={'Toggle mode'} color={color} onClick={onChangeTheme}>{isStateTheme ? 'Dark' : 'Light'} mode</Button>
                 </div>
                 <div className={styles.giCol}>
                     <ul className={cn(styles.giList, styles.giListColors)}>

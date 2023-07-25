@@ -11,15 +11,18 @@
   --c_08: #6a6a6a;
 
   [data-mode="dark"] {
-    --c_06: var(--c_white);
+    --c_06: var(--c_black);
+    --c_07: var(--c_white);
   }
 
   [data-mode="light"] {
-    --c_06: var(--c_black);
+    --c_06: var(--c_white);
+    --c_07: var(--c_black);
   }
 
-  --c_bg: var(--c_07);
   --c_border: var(--c_08);
   --c_base: var(--c_01);
   --c_emoji: '😎';
 }
+
+

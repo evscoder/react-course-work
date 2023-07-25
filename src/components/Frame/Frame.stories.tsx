@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {withRouter} from "storybook-addon-react-router-v6";
-import {FC, useRef, useState} from "react";
+import {withRouter} from 'storybook-addon-react-router-v6';
+import {FC, useRef, useState} from 'react';
 import '../../styles/app.scss';
-import Frame from "./Frame";
+import Frame from './Frame';
 
 interface Props {
     isArr: boolean[];
@@ -14,8 +14,8 @@ const FrameStories: FC<Props> = ({isArr})  => {
 
     return (
         <Frame ref={frameElement} isElementsActive={cellsActive} />
-    )
-}
+    );
+};
 
 const meta = {
     title: 'Example/Frame',

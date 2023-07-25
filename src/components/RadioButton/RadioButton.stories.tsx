@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {withRouter} from "storybook-addon-react-router-v6";
-import {FC, useState} from "react";
+import {withRouter} from 'storybook-addon-react-router-v6';
+import {FC, useState} from 'react';
 import '../../styles/app.scss';
-import RadioButton from "./RadioButton";
+import RadioButton from './RadioButton';
 
 interface Props {
     isColor: string
@@ -15,7 +15,7 @@ const RadioButtons: FC<Props> = ({ isColor })  => {
     const onChangeShape = () => {
         setShape(shape);
         setColor(isColor);
-    }
+    };
 
     return (
         <>
@@ -29,8 +29,8 @@ const RadioButtons: FC<Props> = ({ isColor })  => {
             <RadioButton onChange={onChangeShape} type={shape} id={'yellow'} color={'yellow'} title={'Yellow cells'} name={'color_type'} />&nbsp;
             <RadioButton onChange={onChangeShape} type={shape} id={'white'} color={'white'} title={'White cells'} name={'color_type'} />
         </>
-    )
-}
+    );
+};
 
 const meta = {
     title: 'Example/RadioButton',

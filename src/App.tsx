@@ -1,7 +1,7 @@
 import './styles/app.scss';
-import Header from "./components/Header/Header";
-import Game from "./components/Game/Game";
-import Footer from "./components/Footer/Footer";
+import Header from './components/Header/Header';
+import Game from './components/Game/Game';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (

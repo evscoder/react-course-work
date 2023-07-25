@@ -1,9 +1,9 @@
-import {forwardRef} from "react";
+import {forwardRef} from 'react';
 import styles from './Frame.module.scss';
-import Shape from "../Shape/Shape";
+import Shape from '../Shape/Shape';
 
 interface Props {
-    status?: "reset" | "active";
+    status?: 'reset' | 'active';
     isElementsActive: boolean[]
 }
 
@@ -22,6 +22,6 @@ const Frame = forwardRef<HTMLDivElement, Props>(({status, isElementsActive}, fra
                 );
             })}
         </div>
-    )
-})
+    );
+});
 export default Frame;

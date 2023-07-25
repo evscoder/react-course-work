@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {withRouter} from "storybook-addon-react-router-v6";
+import {withRouter} from 'storybook-addon-react-router-v6';
 import '../../styles/app.scss';
-import RangeInput from "../RangeInput/RangeInput";
-import {FC} from "react";
+import RangeInput from '../RangeInput/RangeInput';
+import {FC} from 'react';
 
 interface Props {
     step: number
@@ -12,8 +12,8 @@ const RangeInputs: FC<Props> = ({ step })  => {
         <>
             <RangeInput id={'speedControl'} min={100} max={500} step={step && 1} />
         </>
-    )
-}
+    );
+};
 
 const meta = {
     title: 'Example/RangeInput',

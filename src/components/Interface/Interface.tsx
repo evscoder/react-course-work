@@ -1,10 +1,10 @@
-import React, {FC} from "react";
+import React, {FC} from 'react';
 import styles from './Interface.module.scss';
-import Button from "../Button/Button";
-import RangeInput from "../RangeInput/RangeInput";
-import RadioButton from "../RadioButton/RadioButton";
-import cn from "clsx";
-import {Colors, Types} from "../types";
+import Button from '../Button/Button';
+import RangeInput from '../RangeInput/RangeInput';
+import RadioButton from '../RadioButton/RadioButton';
+import cn from 'clsx';
+import {Colors, Types} from '../types';
 interface Props {
     isStateTheme: boolean,
     isStateGrid: boolean,
@@ -79,7 +79,7 @@ const GameInterface: FC<Props> = ({isStateGrid, isStateTheme, onCreate, onReset,
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default GameInterface;

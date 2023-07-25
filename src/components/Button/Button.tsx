@@ -1,7 +1,7 @@
-import React, {FC, MouseEventHandler} from "react";
+import React, {FC, MouseEventHandler} from 'react';
 import styles from './Button.module.scss';
 import cn from 'clsx';
-import {Colors} from "../types";
+import {Colors} from '../types';
 export interface Props {
     title?: string,
     disabled?: boolean,
@@ -16,7 +16,7 @@ const Button: FC<Props> = ({ type, title, disabled, onClick, children, color }) 
         <button className={cn(styles['button'], type && styles[`button--${type}`], color && styles[`button--${color}`])} title={title} disabled={disabled} onClick={onClick}>
             { children }
         </button>
-    )
-}
+    );
+};
 
 export default Button;

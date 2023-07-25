@@ -1,7 +1,7 @@
-import React, {FC} from "react";
+import React, {FC} from 'react';
 import styles from './RadioButton.module.scss';
 import cn from 'clsx';
-import {Colors, Types} from "../types";
+import {Colors, Types} from '../types';
 export interface Props {
     id: string,
     title?: string,
@@ -17,7 +17,7 @@ const RadioButton: FC<Props> = ({ id, title , color, type, name, onChange}) => {
             <input type="radio" id={id} name={name} onChange={onChange} data-type={type} data-color={color}/>
             <span className={styles['radio-button__marker']}></span>
         </label>
-    )
-}
+    );
+};
 
 export default RadioButton;

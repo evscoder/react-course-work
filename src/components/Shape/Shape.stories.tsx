@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {withRouter} from "storybook-addon-react-router-v6";
-import {FC} from "react";
+import {withRouter} from 'storybook-addon-react-router-v6';
+import {FC} from 'react';
 import '../../styles/app.scss';
-import Shape from "./Shape";
+import Shape from './Shape';
 
 interface Props {
     isState: boolean;
@@ -14,8 +14,8 @@ const ShapeStories: FC<Props> = ({isState})  => {
             <Shape isActive={isState && true} />&nbsp;
             <Shape isActive={false} />&nbsp;
         </>
-    )
-}
+    );
+};
 
 const meta = {
     title: 'Example/Shape',

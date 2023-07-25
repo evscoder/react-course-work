@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC} from 'react';
 import styles from './RangeInput.module.scss';
 export interface Props {
     id?: string,
@@ -24,7 +24,7 @@ const RangeInput: FC<Props> = ({ id, name, min, max, value, step, disabled, titl
             disabled={disabled}
             title={title}
         />
-    )
-}
+    );
+};
 
 export default RangeInput;

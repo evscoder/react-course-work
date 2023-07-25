@@ -1,7 +1,7 @@
-import React, {FC, useEffect, useRef, useState} from "react";
+import React, {FC, useEffect, useRef, useState} from 'react';
 import styles from './Game.module.scss';
-import Frame from "../Frame/Frame";
-import Interface from "../Interface/Interface";
+import Frame from '../Frame/Frame';
+import Interface from '../Interface/Interface';
 
 interface Props {
     title?: string
@@ -25,7 +25,7 @@ const Game: FC<Props> = () => {
 
         cells.forEach(() => {
             activeCells.push(false);
-        })
+        });
 
         const uniqueSet = new Set();
         while (uniqueSet.size < maxCells) {
@@ -40,14 +40,14 @@ const Game: FC<Props> = () => {
         }
 
         setCellsActive(activeCells);
-    }
+    };
 
     const onReset = () => {
         const arr: boolean[] = [];
 
         cellsActive.forEach(() => {
             arr.push(false);
-        })
+        });
 
         setCellsActive(arr);
     };
@@ -65,20 +65,20 @@ const Game: FC<Props> = () => {
 
         setShape(shapeData.shape);
         setColor(shapeData.color);
-    }
+    };
 
     const onChangeGrid = () => {
         setIsGrid(!isGrid);
-    }
+    };
 
     useEffect(() => {
         document.body.dataset.mode = theme ? 'light' : 'dark';
-    })
+    });
 
     const onToggleTheme = () => {
         setTheme(!theme);
         document.body.dataset.mode = theme ? 'light' : 'dark';
-    }
+    };
 
     return (
         <div ref={gameElement} data-shape={'square'} data-color={'purple'} data-grid={isGrid ? 'off' : 'on'} className={styles['game']}>
@@ -95,7 +95,7 @@ const Game: FC<Props> = () => {
                 onChangeGrid={onChangeGrid}
             />
         </div>
-    )
-}
+    );
+};
 
 export default Game;

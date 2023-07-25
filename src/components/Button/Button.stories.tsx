@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {withRouter} from "storybook-addon-react-router-v6";
-import {FC} from "react";
-import Button  from "./Button";
+import {withRouter} from 'storybook-addon-react-router-v6';
+import {FC} from 'react';
+import Button  from './Button';
 import '../../styles/app.scss';
 
 interface Props {
@@ -18,8 +18,8 @@ const ButtonStories: FC<Props> = ({color})  => {
             <Button color={'yellow'}>Yellow Button</Button>&nbsp;
             <Button color={'white'}>White Button</Button>
         </>
-    )
-}
+    );
+};
 
 const meta = {
     title: 'Example/Button',

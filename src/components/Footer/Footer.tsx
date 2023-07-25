@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC} from 'react';
 import styles from './Footer.module.scss';
 interface Props {
     title?: string
@@ -14,7 +14,7 @@ const Footer: FC<Props> = ({title}) => {
                 with tut aid by source of <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target={'_blank'}>Wikipedia</a>
             </p>
         </footer>
-    )
-}
+    );
+};
 
 export default Footer;

@@ -14,7 +14,7 @@ export interface Props {
 const RadioButton: FC<Props> = ({ id, title , color, type, name, onChange}) => {
     return (
         <label className={cn(styles['radio-button'], styles[`radio-button--${color}`], styles[`radio-button--${type}`])} title={title}>
-            <input type="radio" id={id} name={name} onChange={onChange} data-type={type} data-color={color}/>
+            <input type="radio" id={id} data-testid={id} name={name} onChange={onChange} data-type={type} data-color={color}/>
             <span className={styles['radio-button__marker']}></span>
         </label>
     );

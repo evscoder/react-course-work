@@ -18,7 +18,7 @@ const Frame = forwardRef<HTMLDivElement, Props>(({status, isElementsActive}, fra
         <div ref={frameElement} data-status={status} className={styles['frame']}>
             {shapes.map((_, index: number) => {
                 return (
-                    <Shape isActive={isElementsActive[index] && true} />
+                    <Shape isActive={isElementsActive[index] && true} key={`${index}_shape`} />
                 );
             })}
         </div>

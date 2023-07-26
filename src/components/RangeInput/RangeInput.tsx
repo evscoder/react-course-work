@@ -23,6 +23,9 @@ const RangeInput: FC<Props> = ({ id, name, min, max, value, step, disabled, titl
             step={step}
             disabled={disabled}
             title={title}
+            onChange={() => {
+                console.log('change');
+            }}
         />
     );
 };

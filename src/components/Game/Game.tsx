@@ -81,7 +81,7 @@ const Game: FC<Props> = () => {
     };
 
     return (
-        <div ref={gameElement} data-shape={'square'} data-color={'purple'} data-grid={isGrid ? 'off' : 'on'} className={styles['game']}>
+        <div ref={gameElement} data-shape={'square'} data-color={'purple'} data-grid={isGrid ? 'off' : 'on'} data-testid={'container'} className={styles['game']}>
             <Frame ref={frameElement} isElementsActive={cellsActive} />
             <Interface
                 isStateTheme={theme}

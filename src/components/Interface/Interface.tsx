@@ -22,16 +22,16 @@ const GameInterface: FC<Props> = ({isStateGrid, isStateTheme, onCreate, onReset,
         <div className={styles['game-interface']}>
             <div className={styles.giRow}>
                 <div className={styles.giCol}>
-                    <Button title={'Make random alive cells'} color={color} onClick={onCreate}>Create</Button>
+                    <Button id={'create'} title={'Make random alive cells'} color={color} onClick={onCreate}>Create</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Start alive cells evolution'} color={color} >Evolve</Button>
+                    <Button id={'evolve'} title={'Start alive cells evolution'} color={color} >Evolve</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Kill all alive cells'} color={color} onClick={onReset}>Reset</Button>
+                    <Button id={'reset'} title={'Kill all alive cells'} color={color} onClick={onReset}>Reset</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <RangeInput id={'speedControl'} min={100} max={500} value={'300'} step={1} />
+                    <RangeInput id={'speedInput'} min={100} max={500} value={'300'} step={1} />
                 </div>
                 <div className={styles.giCol}>
                     <ul className={styles.giList}>
@@ -47,10 +47,10 @@ const GameInterface: FC<Props> = ({isStateGrid, isStateTheme, onCreate, onReset,
                     </ul>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Toggle grid'} color={color} onClick={onChangeGrid} >Grid {isStateGrid ? 'on' : 'off'}</Button>
+                    <Button id={'btnGrid'} title={'Toggle grid'} color={color} onClick={onChangeGrid} >Grid {isStateGrid ? 'on' : 'off'}</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <Button title={'Toggle mode'} color={color} onClick={onChangeTheme}>{isStateTheme ? 'Dark' : 'Light'} mode</Button>
+                    <Button id={'btnMode'} title={'Toggle mode'} color={color} onClick={onChangeTheme}>{isStateTheme ? 'Dark' : 'Light'} mode</Button>
                 </div>
                 <div className={styles.giCol}>
                     <ul className={cn(styles.giList, styles.giListColors)}>

@@ -8,9 +8,8 @@
 [Coverage](https://evscoder.github.io/react-course-work/coverage/lcov-report/index.html) </br>
 [Storybook](https://evscoder.github.io/react-course-work/storybook/index.html)
 
-#### GEN ART WITH CONWAY'S GAME OF LIFE
-* A version of Conway's game of life to make generative art by creating random alive cells and transform them via cellular automation.
-## GET STARTED:
+- A version of Conway's game of life to make generative art by creating random alive cells and transform them via cellular automation.
+#### GET STARTED:
 - Click on the cells to create alive cells, or click on the 'create' button to randomly create a bunch of alive cells.
 - Click on 'evolve' button to start the cells' evolution process based on the rules.
 - Click on 'stop' button to pause the cells' evolution process.
@@ -22,5 +21,5 @@ FEATURES:
 - Choose any color or emoji form for your cells.
 - Type any emoji or character for your cells shapes.
 - Toggle the grid and dark/light mode.
-### Read about Conway's Game of Life:
+#### Read about Conway's Game of Life:
 * https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life

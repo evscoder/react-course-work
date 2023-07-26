@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1690388247631" clover="3.2.0">
+  <project timestamp="1690388247631" name="All files">
+    <metrics statements="97" coveredstatements="76" conditionals="21" coveredconditionals="16" methods="20" coveredmethods="13" elements="138" coveredelements="105" complexity="0" loc="97" ncloc="97" packages="7" files="7" classes="7"/>
+    <package name="Button">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Button/Button.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="65" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Frame">
+      <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="Frame.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Frame/Frame.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+        <line num="14" count="23400" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="20" count="23400" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Game">
+      <metrics statements="52" coveredstatements="33" conditionals="9" coveredconditionals="7" methods="10" coveredmethods="5"/>
+      <file name="Game.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Game/Game.tsx">
+        <metrics statements="52" coveredstatements="33" conditionals="9" coveredconditionals="7" methods="10" coveredmethods="5"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="15" count="13" type="stmt"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="19" count="13" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="45" count="13" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="13" type="stmt"/>
+        <line num="56" count="9" type="stmt"/>
+        <line num="57" count="9" type="stmt"/>
+        <line num="58" count="9" type="stmt"/>
+        <line num="59" count="9" type="stmt"/>
+        <line num="61" count="9" type="stmt"/>
+        <line num="63" count="9" type="stmt"/>
+        <line num="64" count="9" type="stmt"/>
+        <line num="66" count="9" type="stmt"/>
+        <line num="67" count="9" type="stmt"/>
+        <line num="70" count="13" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="74" count="13" type="stmt"/>
+        <line num="75" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="78" count="13" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="83" count="13" type="stmt"/>
+        <line num="101" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Interface">
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="Interface.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Interface/Interface.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="13" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="RadioButton">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="RadioButton.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/RadioButton/RadioButton.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="130" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="RangeInput">
+      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="RangeInput.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/RangeInput/RangeInput.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Shape">
+      <metrics statements="12" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+      <file name="Shape.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Shape/Shape.tsx">
+        <metrics statements="12" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="28800" type="stmt"/>
+        <line num="12" count="28800" type="stmt"/>
+        <line num="14" count="28800" type="stmt"/>
+        <line num="15" count="5400" type="stmt"/>
+        <line num="18" count="28800" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="28800" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

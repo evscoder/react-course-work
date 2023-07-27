@@ -1,23 +1,31 @@
-import {forwardRef} from 'react';
+import {forwardRef, useEffect, useState} from 'react';
 import styles from './Frame.module.scss';
 import Shape from '../Shape/Shape';
 
 interface Props {
     status?: 'reset' | 'active';
-    isElementsActive: any
+    isElementsActive: number[][]
 }
 
 const Frame = forwardRef<HTMLTableElement, Props>(({status, isElementsActive}, frameElement) => {
-    const rows: number[] = [];
-    const cols: number[] = [];
+    const [rows, setRows] = useState<number[]>([]);
+    const [cols, setCols] = useState<number[]>([]);
 
-    for (let row = 0; row < 30; row++) {
-        rows.push(row + 1);
-    }
+    useEffect(() => {
+        const arrRow: number[] = [];
+        const arrCols: number[] = [];
 
-    for (let col = 0; col < 60; col++) {
-        cols.push(col + 1);
-    }
+        for (let row = 0; row < 30; row++) {
+            arrRow.push(row + 1);
+        }
+
+        for (let col = 0; col < 60; col++) {
+            arrCols.push(col + 1);
+        }
+
+        setRows(arrRow);
+        setCols(arrCols);
+    }, []);
 
     return (
         <table ref={frameElement} data-status={status} className={styles['frame']}>
@@ -26,7 +34,7 @@ const Frame = forwardRef<HTMLTableElement, Props>(({status, isElementsActive}, f
                     <tr>
                         {cols.map((_, j: number ) => {
                             return (
-                                <Shape id={`${i}_${j}`} isActive={isElementsActive[i][j]} />
+                                <Shape id={`${i}_${j}`} isActive={!!isElementsActive[i][j]} />
                             )
                         })}
                     </tr>

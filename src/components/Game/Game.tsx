@@ -13,10 +13,11 @@ const Game: FC<Props> = () => {
     const gameElement = useRef<HTMLDivElement>(null);
     const frameElement = useRef<HTMLTableElement>(null);
     const [cellsActive, setCellsActive] = useState<number[][]>([]);
+    const [nextCells, setNextCells] = useState<number[][]>([])
     const [theme, setTheme] = useState<boolean>(false);
     const [isGrid, setIsGrid] = useState<boolean>(false);
-    const rows = 30;
-    const cols = 60;
+    const [rows] = useState<number>(30);
+    const [cols] = useState<number>(60);
 
     const onCreate = () => {
         const table = frameElement.current as HTMLTableElement;
@@ -24,7 +25,7 @@ const Game: FC<Props> = () => {
         const totalCells = cells.length;
         const maxCells = totalCells * 0.35;
 
-        const newArr: any = cellsActive;
+        const newArr: number[][] = cellsActive;
 
         const uniqueSet = new Set();
         while (uniqueSet.size < maxCells) {
@@ -42,19 +43,11 @@ const Game: FC<Props> = () => {
             });
         }
 
-        console.log(newArr);
-
-        setCellsActive(newArr);
+        setCellsActive([...newArr]);
     }
 
     const onReset = () => {
-        const arr: number[] = [];
-
-        cellsActive.forEach(() => {
-            arr.push(0);
-        });
-
-        setCellsActive(arr);
+        createArray();
     };
 
     const onChangeShape = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -77,24 +70,117 @@ const Game: FC<Props> = () => {
     };
 
     const createArray = () => {
-        const currentGenCells: number[][] = [];
-        const nextGenCells: number[][] = [];
+        const currentCells: number[][] = [];
+        const nextCells: number[][] = [];
 
         for (let i = 0; i < rows; i++) {
-            currentGenCells[i] = new Array(cols);
-            nextGenCells[i] = new Array(cols);
+            currentCells[i] = new Array(cols);
+            nextCells[i] = new Array(cols);
 
             for (let j = 0; j < cols; j++) {
-                currentGenCells[i][j] = 0;
-                nextGenCells[i][j] = 0;
+                currentCells[i][j] = 0;
+                nextCells[i][j] = 0;
             }
         }
-        setCellsActive(currentGenCells);
 
-        debugger;
-
-        console.log(cellsActive[0][3]);
+        setCellsActive(currentCells);
+        setNextCells(nextCells);
     };
+
+    const getNeighborCount = (row: string, col: string) => {
+        let nCount = 0;
+        const nRow = Number(row);
+        const nCol = Number(col);
+
+        if (nRow - 1 >= 0) {
+            if (cellsActive[nRow - 1][nCol] === 1) {
+                nCount++;
+            }
+        }
+
+        if (nRow - 1 >= 0 && nCol - 1 >= 0) {
+            if (cellsActive[nRow - 1][nCol - 1] === 1) {
+                nCount++;
+            }
+        }
+
+        if (nRow - 1 >= 0 && nCol + 1 < cols) {
+            if (cellsActive[nRow - 1][nCol + 1] === 1) {
+                nCount++;
+            }
+        }
+
+        if (nCol - 1 >= 0) {
+            if (cellsActive[nRow][nCol - 1] === 1) {
+                nCount++;
+            }
+        }
+
+        if (nCol + 1 < cols) {
+            if (cellsActive[nRow][nCol + 1] === 1) {
+                nCount++;
+            }
+        }
+
+        if (nRow + 1 < rows && nCol - 1 >= 0) {
+            if (cellsActive[nRow + 1][nCol - 1] === 1) {
+                nCount++;
+            }
+        }
+
+        if (nRow + 1 < rows && nCol + 1 < cols) {
+            if (cellsActive[nRow + 1][nCol + 1] === 1) {
+                nCount++;
+            }
+        }
+
+        if (nRow + 1 < rows) {
+            if (cellsActive[nRow + 1][nCol] === 1) {
+                nCount++;
+            }
+        }
+
+        return nCount;
+    };
+    const createNextGenerationArr = () => {
+        const nextArr = nextCells;
+
+        for (const row in cellsActive) {
+            for (const col in cellsActive[row]) {
+                const neighbors = getNeighborCount(row, col);
+
+                if (cellsActive[row][col] === 1) {
+                    if (neighbors < 2) {
+                        nextArr[row][col] = 0;
+                    } else if (neighbors === 2 || neighbors === 3) {
+                        nextArr[row][col] = 1;
+                    } else if (neighbors > 3) {
+                        nextArr[row][col] = 0;
+                    }
+                } else if (cellsActive[row][col] === 0) {
+                    if (neighbors === 3) {
+                        nextArr[row][col] = 1;
+                    }
+                }
+            }
+        }
+
+        setNextCells([...nextArr]);
+    }
+
+    const updateCurrGenerationArr = () => {
+        for (const row in cellsActive) {
+            for (const col in cellsActive[row]) {
+                cellsActive[row][col] = nextCells[row][col];
+                nextCells[row][col] = 0;
+            }
+        }
+    }
+    const onEvolve = () => {
+        createNextGenerationArr();
+        updateCurrGenerationArr();
+        setTimeout(() => onEvolve(), 250);
+    }
 
     useEffect(() => {
         document.body.dataset.mode = theme ? 'light' : 'dark';
@@ -118,6 +204,7 @@ const Game: FC<Props> = () => {
                 color={color === 'emoji' ? 'purple' : color}
                 onCreate={onCreate}
                 onReset={onReset}
+                onEvolve={onEvolve}
                 onChangeTheme={onToggleTheme}
                 onChangeGrid={onChangeGrid}
             />

@@ -3,11 +3,12 @@ import styles from './Shape.module.scss';
 import cn from 'clsx';
 
 interface Props {
+    id: string
     classNames?: string;
     isActive: boolean;
 }
 
-const Shape: FC<Props> = ({ isActive }) => {
+const Shape: FC<Props> = ({ id, isActive }) => {
     const [active, setActive] = useState<boolean>(false);
     const shapeElement = useRef<HTMLTableCellElement>(null);
 
@@ -20,7 +21,7 @@ const Shape: FC<Props> = ({ isActive }) => {
     };
 
     return (
-        <div ref={shapeElement} className={cn(styles['shape'], active && styles['is-active'])} onClick={onClick}></div>
+        <td ref={shapeElement} id={id} className={cn(styles['shape'], active && styles['is-active'])} onClick={onClick}></td>
     );
 };
 

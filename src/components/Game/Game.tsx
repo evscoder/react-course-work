@@ -12,41 +12,46 @@ const Game: FC<Props> = () => {
     const [color, setColor] = useState<string | undefined>('purple');
     const gameElement = useRef<HTMLDivElement>(null);
     const frameElement = useRef<HTMLTableElement>(null);
-    const [cellsActive, setCellsActive] = useState<boolean[]>([]);
+    const [cellsActive, setCellsActive] = useState<number[][]>([]);
     const [theme, setTheme] = useState<boolean>(false);
     const [isGrid, setIsGrid] = useState<boolean>(false);
+    const rows = 30;
+    const cols = 60;
 
     const onCreate = () => {
-        const table = frameElement.current as HTMLDivElement;
-        const cells = table.querySelectorAll('div');
-        const totalCells: number = cells.length;
+        const table = frameElement.current as HTMLTableElement;
+        const cells = table.querySelectorAll('td');
+        const totalCells = cells.length;
         const maxCells = totalCells * 0.35;
-        const activeCells: boolean[] = [];
 
-        cells.forEach(() => {
-            activeCells.push(false);
-        });
+        const newArr: any = cellsActive;
 
         const uniqueSet = new Set();
         while (uniqueSet.size < maxCells) {
             const random = Math.floor(Math.random() * totalCells);
             uniqueSet.add(random);
 
-            cells.forEach((_, i: number) => {
+            cells.forEach((el: HTMLTableCellElement, i: number) => {
+                const cellStatus = el.id.split("_");
+                const row = Number(cellStatus[0]);
+                const col = Number(cellStatus[1]);
+
                 if (i === random) {
-                    activeCells[i] = true;
+                    newArr[row][col] = 1;
                 }
             });
         }
 
-        setCellsActive(activeCells);
-    };
+        console.log(newArr);
+
+        setCellsActive(newArr);
+    }
 
     const onReset = () => {
-        const arr: boolean[] = [];
+        const arr: number[] = [];
 
         cellsActive.forEach(() => {
-            arr.push(false);
+            arr.push(0);
         });
 
         setCellsActive(arr);
@@ -71,9 +76,31 @@ const Game: FC<Props> = () => {
         setIsGrid(!isGrid);
     };
 
+    const createArray = () => {
+        const currentGenCells: number[][] = [];
+        const nextGenCells: number[][] = [];
+
+        for (let i = 0; i < rows; i++) {
+            currentGenCells[i] = new Array(cols);
+            nextGenCells[i] = new Array(cols);
+
+            for (let j = 0; j < cols; j++) {
+                currentGenCells[i][j] = 0;
+                nextGenCells[i][j] = 0;
+            }
+        }
+        setCellsActive(currentGenCells);
+
+        debugger;
+
+        console.log(cellsActive[0][3]);
+    };
+
     useEffect(() => {
         document.body.dataset.mode = theme ? 'light' : 'dark';
-    });
+
+        createArray();
+    }, []);
 
     const onToggleTheme = () => {
         setTheme(!theme);

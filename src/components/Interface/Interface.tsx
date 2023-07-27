@@ -13,11 +13,12 @@ interface Props {
     color?: Colors,
     type?: Types,
     onCreate: React.MouseEventHandler<HTMLButtonElement>,
+    onEvolve?: React.MouseEventHandler<HTMLButtonElement>,
     onReset: React.MouseEventHandler<HTMLButtonElement>,
     onChangeTheme: React.MouseEventHandler<HTMLButtonElement>,
     onChangeGrid: React.MouseEventHandler<HTMLButtonElement>,
 }
-const GameInterface: FC<Props> = ({isStateGrid, isStateTheme, onCreate, onReset, onChangeShape, onChangeTheme, onChangeGrid, type, color}) => {
+const GameInterface: FC<Props> = ({isStateGrid, isStateTheme, onCreate, onEvolve, onReset, onChangeShape, onChangeTheme, onChangeGrid, type, color}) => {
     return (
         <div className={styles['game-interface']}>
             <div className={styles.giRow}>
@@ -25,7 +26,7 @@ const GameInterface: FC<Props> = ({isStateGrid, isStateTheme, onCreate, onReset,
                     <Button id={'create'} title={'Make random alive cells'} color={color} onClick={onCreate}>Create</Button>
                 </div>
                 <div className={styles.giCol}>
-                    <Button id={'evolve'} title={'Start alive cells evolution'} color={color} >Evolve</Button>
+                    <Button id={'evolve'} title={'Start alive cells evolution'} color={color} onClick={onEvolve}>Evolve</Button>
                 </div>
                 <div className={styles.giCol}>
                     <Button id={'reset'} title={'Kill all alive cells'} color={color} onClick={onReset}>Reset</Button>

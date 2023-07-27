@@ -1,9 +1,6 @@
 @import "../../styles/plugins";
 
 .frame {
-  display: grid;
-  grid-template: 30fr / repeat(60, 1fr);
-  grid-gap: 3px;
   width: 100%;
   max-width: 1200px;
   margin: ($gap * 1.25) auto ($gap * 2);

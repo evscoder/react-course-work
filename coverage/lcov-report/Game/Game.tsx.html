@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44.26% </span>
+                <span class="strong">42.85% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>54/122</span>
+                <span class='fraction'>57/133</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.63% </span>
+                <span class="strong">13.04% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/44</span>
+                <span class='fraction'>6/46</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.69% </span>
+                <span class="strong">42.3% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>52/119</span>
+                <span class='fraction'>55/130</span>
             </div>
         
             
@@ -278,7 +278,22 @@
 <a name='L213'></a><a href='#L213'>213</a>
 <a name='L214'></a><a href='#L214'>214</a>
 <a name='L215'></a><a href='#L215'>215</a>
-<a name='L216'></a><a href='#L216'>216</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -298,6 +313,9 @@
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -324,9 +342,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -461,6 +476,19 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -474,6 +502,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -508,11 +538,14 @@ const Game: FC&lt;Props&gt; = () =&gt; {
     const gameElement = useRef&lt;HTMLDivElement&gt;(null);
     const frameElement = useRef&lt;HTMLTableElement&gt;(null);
     const [cellsActive, setCellsActive] = useState&lt;number[][]&gt;([]);
-    const [nextCells, setNextCells] = useState&lt;number[][]&gt;([])
+    const [nextCells, setNextCells] = useState&lt;number[][]&gt;([]);
+    const [start, setStart] = useState&lt;boolean&gt;(false);
+    const [evolve, setEvolve] = useState&lt;boolean&gt;(false);
     const [theme, setTheme] = useState&lt;boolean&gt;(false);
     const [isGrid, setIsGrid] = useState&lt;boolean&gt;(false);
     const [rows] = useState&lt;number&gt;(30);
     const [cols] = useState&lt;number&gt;(60);
+    const [evolveId, setEvolveId] = useState&lt;any&gt;();
 &nbsp;
     const onCreate = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
         const table = <span class="cstat-no" title="statement not covered" >frameElement.current as HTMLTableElement;</span>
@@ -528,7 +561,7 @@ const Game: FC&lt;Props&gt; = () =&gt; {
 <span class="cstat-no" title="statement not covered" >            uniqueSet.add(random);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >            cells.forEach(<span class="fstat-no" title="function not covered" >(e</span>l: HTMLTableCellElement, i: number) =&gt; {</span>
-                const cellStatus = <span class="cstat-no" title="statement not covered" >el.id.split("_");</span>
+                const cellStatus = <span class="cstat-no" title="statement not covered" >el.id.split('_');</span>
                 const row = <span class="cstat-no" title="statement not covered" >Number(cellStatus[0]);</span>
                 const col = <span class="cstat-no" title="statement not covered" >Number(cellStatus[1]);</span>
 &nbsp;
@@ -538,11 +571,8 @@ const Game: FC&lt;Props&gt; = () =&gt; {
             });
         }
 &nbsp;
+<span class="cstat-no" title="statement not covered" >        setStart(true);</span>
 <span class="cstat-no" title="statement not covered" >        setCellsActive([...newArr]);</span>
-    }
-&nbsp;
-    const onReset = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
-<span class="cstat-no" title="statement not covered" >        createArray();</span>
     };
 &nbsp;
     const onChangeShape = (event: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
@@ -661,7 +691,7 @@ const Game: FC&lt;Props&gt; = () =&gt; {
         }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        setNextCells([...nextArr]);</span>
-    }
+    };
 &nbsp;
     const updateCurrGenerationArr = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
 <span class="cstat-no" title="statement not covered" >        for (const row in cellsActive) {</span>
@@ -670,12 +700,25 @@ const Game: FC&lt;Props&gt; = () =&gt; {
 <span class="cstat-no" title="statement not covered" >                nextCells[row][col] = 0;</span>
             }
         }
-    }
+    };
     const onEvolve = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
-<span class="cstat-no" title="statement not covered" >        createNextGenerationArr();</span>
-<span class="cstat-no" title="statement not covered" >        updateCurrGenerationArr();</span>
-<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >onEvolve(),</span> 250);</span>
-    }
+<span class="cstat-no" title="statement not covered" >        if (evolve) {</span>
+<span class="cstat-no" title="statement not covered" >            setEvolve(false);</span>
+<span class="cstat-no" title="statement not covered" >            setEvolveId(clearTimeout(evolveId));</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            createNextGenerationArr();</span>
+<span class="cstat-no" title="statement not covered" >            updateCurrGenerationArr();</span>
+<span class="cstat-no" title="statement not covered" >            setEvolve(true);</span>
+<span class="cstat-no" title="statement not covered" >            setEvolveId(setTimeout(<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >onEvolve(),</span> 250));</span>
+        }
+    };
+&nbsp;
+    const onReset = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
+<span class="cstat-no" title="statement not covered" >        setEvolveId(clearTimeout(evolveId));</span>
+<span class="cstat-no" title="statement not covered" >        setStart(false);</span>
+<span class="cstat-no" title="statement not covered" >        setEvolve(false);</span>
+<span class="cstat-no" title="statement not covered" >        createArray();</span>
+    };
 &nbsp;
     useEffect(() =&gt; {
         document.body.dataset.mode = theme ? <span class="branch-0 cbranch-no" title="branch not covered" >'light' </span>: 'dark';
@@ -692,6 +735,8 @@ const Game: FC&lt;Props&gt; = () =&gt; {
         &lt;div ref={gameElement} data-shape={'square'} data-color={'purple'} data-grid={isGrid ? 'off' : 'on'} data-testid={'container'} className={styles['game']}&gt;
             &lt;Frame ref={frameElement} isElementsActive={cellsActive} /&gt;
             &lt;Interface
+                isStart={start}
+                isEvolve={evolve}
                 isStateTheme={theme}
                 isStateGrid={isGrid}
                 onChangeShape={onChangeShape}
@@ -715,7 +760,7 @@ export default Game;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-27T13:23:57.525Z
+                at 2023-07-27T14:15:41.702Z
             </div>
         <script src="../prettify.js"></script>
         <script>

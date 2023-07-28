@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.15% </span>
+                <span class="strong">42.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>63/146</span>
+                <span class='fraction'>64/150</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35.29% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/17</span>
+                <span class='fraction'>6/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.65% </span>
+                <span class="strong">42.17% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>61/143</span>
+                <span class='fraction'>62/147</span>
             </div>
         
             
@@ -316,7 +316,16 @@
 <a name='L251'></a><a href='#L251'>251</a>
 <a name='L252'></a><a href='#L252'>252</a>
 <a name='L253'></a><a href='#L253'>253</a>
-<a name='L254'></a><a href='#L254'>254</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -385,6 +394,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
@@ -547,6 +564,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -589,7 +607,7 @@ const Game: FC&lt;Props&gt; = () =&gt; {
     const [evolve, setEvolve] = useState&lt;boolean&gt;(false);
     const [theme, setTheme] = useState&lt;boolean&gt;(false);
     const [isGrid, setIsGrid] = useState&lt;boolean&gt;(false);
-    const [gridSize] = useState&lt;number[]&gt;([30, 60]);
+    const [gridSize, setGridSize] = useState&lt;number[]&gt;([30, 60]);
     const [evolveId, setEvolveId] = useState&lt;any&gt;();
     const [timeSpeed, setTimeSpeed] = useState&lt;number&gt;(250);
 &nbsp;
@@ -638,6 +656,14 @@ const Game: FC&lt;Props&gt; = () =&gt; {
 &nbsp;
     const onChangeGrid = () =&gt; {
         setIsGrid(!isGrid);
+    };
+&nbsp;
+    const onChangeSize = <span class="fstat-no" title="function not covered" >(e</span>vent: any): void =&gt; {
+        const button = <span class="cstat-no" title="statement not covered" >event.target as HTMLButtonElement;</span>
+&nbsp;
+        const size = <span class="cstat-no" title="statement not covered" >button.dataset.size!.split('_');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        setGridSize([+size[0], +size[1]]);</span>
     };
 &nbsp;
     const createArray = () =&gt; {
@@ -792,7 +818,7 @@ const Game: FC&lt;Props&gt; = () =&gt; {
 &nbsp;
             createArray();
         }
-    }, []);
+    }, [gridSize]);
 &nbsp;
     const onToggleTheme = () =&gt; {
         setTheme(!theme);
@@ -816,6 +842,7 @@ const Game: FC&lt;Props&gt; = () =&gt; {
                 onChangeSpeed={onChangeSpeed}
                 onChangeTheme={onToggleTheme}
                 onChangeGrid={onChangeGrid}
+                onChangeSize={onChangeSize}
             /&gt;
         &lt;/div&gt;
     );
@@ -829,7 +856,7 @@ export default Game;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-28T14:26:17.699Z
+                at 2023-07-28T15:44:42.827Z
             </div>
         <script src="../prettify.js"></script>
         <script>

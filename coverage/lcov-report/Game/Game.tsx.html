@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.55% </span>
+                <span class="strong">36.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>64/166</span>
+                <span class='fraction'>66/180</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.5% </span>
+                <span class="strong">36.99% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>62/161</span>
+                <span class='fraction'>64/173</span>
             </div>
         
             
@@ -352,7 +352,24 @@
 <a name='L287'></a><a href='#L287'>287</a>
 <a name='L288'></a><a href='#L288'>288</a>
 <a name='L289'></a><a href='#L289'>289</a>
-<a name='L290'></a><a href='#L290'>290</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -382,6 +399,21 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -460,6 +492,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -671,6 +705,21 @@ const Game: FC&lt;Props&gt; = () =&gt; {
         const totalCells = <span class="cstat-no" title="statement not covered" >cells.length;</span>
         const maxCells = <span class="cstat-no" title="statement not covered" >totalCells * 0.35;</span>
         const uniqueSet = <span class="cstat-no" title="statement not covered" >new Set();</span>
+        const rows = <span class="cstat-no" title="statement not covered" >gridSize[0];</span>
+        const cols = <span class="cstat-no" title="statement not covered" >gridSize[1];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; rows; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            cellsActive[i] = [cols];</span>
+<span class="cstat-no" title="statement not covered" >            nextCells[i] = [cols];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            for (let j = <span class="cstat-no" title="statement not covered" >0;</span> j &lt; cols; j++) {</span>
+<span class="cstat-no" title="statement not covered" >                cellsActive[i][j] = 0;</span>
+<span class="cstat-no" title="statement not covered" >                nextCells[i][j] = 0;</span>
+            }
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        setCellsActive([...cellsActive]);</span>
+<span class="cstat-no" title="statement not covered" >        setNextCells([...nextCells]);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        while (uniqueSet.size &lt; maxCells) {</span>
             const random = <span class="cstat-no" title="statement not covered" >Math.floor(Math.random() * totalCells);</span>
@@ -749,21 +798,23 @@ const Game: FC&lt;Props&gt; = () =&gt; {
     };
 &nbsp;
     const createArray = () =&gt; {
+        const currentCells: number[][] = [];
+        const nextCells: number[][] = [];
         const rows = gridSize[0];
         const cols = gridSize[1];
 &nbsp;
         for (let i = 0; i &lt; rows; i++) {
-            cellsActive[i] = [cols];
+            currentCells[i] = [cols];
             nextCells[i] = [cols];
 &nbsp;
             for (let j = 0; j &lt; cols; j++) {
-                cellsActive[i][j] = 0;
+                currentCells[i][j] = 0;
                 nextCells[i][j] = 0;
             }
         }
 &nbsp;
-        setCellsActive([...cellsActive]);
-        setNextCells([...nextCells]);
+        setCellsActive(currentCells);
+        setNextCells(nextCells);
     };
 &nbsp;
     const getNeighborCount = <span class="fstat-no" title="function not covered" >(r</span>ow: string, col: string) =&gt; {
@@ -937,7 +988,7 @@ export default Game;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-30T06:34:45.299Z
+                at 2023-07-30T07:58:36.838Z
             </div>
         <script src="../prettify.js"></script>
         <script>

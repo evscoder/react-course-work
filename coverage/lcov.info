@@ -23,8 +23,8 @@ end_of_record
 TN:
 SF:src/components/Frame/Frame.tsx
 FN:10,(anonymous_1)
-FN:14,(anonymous_2)
-FN:17,(anonymous_3)
+FN:13,(anonymous_2)
+FN:16,(anonymous_3)
 FNF:3
 FNH:3
 FNDA:16,(anonymous_1)
@@ -35,9 +35,9 @@ DA:2,1
 DA:3,1
 DA:10,1
 DA:11,16
-DA:15,390
-DA:18,23400
-DA:29,1
+DA:14,390
+DA:17,23400
+DA:27,1
 LF:8
 LH:8
 BRF:0

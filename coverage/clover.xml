@@ -1,42 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1699639896541" clover="3.2.0">
-  <project timestamp="1699639896541" name="All files">
+<coverage generated="1699690154642" clover="3.2.0">
+  <project timestamp="1699690154642" name="All files">
     <metrics statements="229" coveredstatements="114" conditionals="66" coveredconditionals="20" methods="34" coveredmethods="16" elements="329" coveredelements="150" complexity="0" loc="229" ncloc="229" packages="8" files="9" classes="9"/>
-    <package name="components.Button">
-      <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
-      <file name="Button.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Button/Button.tsx">
-        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="128" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.Frame">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="Frame.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Frame/Frame.tsx">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
-        <line num="13" count="450" type="stmt"/>
-        <line num="16" count="27000" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.Game">
+    <package name="components.container.Game">
       <metrics statements="57" coveredstatements="34" conditionals="11" coveredconditionals="7" methods="13" coveredmethods="5"/>
-      <file name="Game.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Game/Game.tsx">
+      <file name="Game.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/container/Game/Game.tsx">
         <metrics statements="57" coveredstatements="34" conditionals="11" coveredconditionals="7" methods="13" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="30" type="stmt"/>
         <line num="21" count="16" type="stmt"/>
@@ -90,29 +65,54 @@
         <line num="122" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.Interface">
+    <package name="components.container.Interface">
       <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
-      <file name="Interface.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Interface/Interface.tsx">
+      <file name="Interface.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/container/Interface/Interface.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
         <line num="27" count="16" type="stmt"/>
         <line num="104" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.RadioButton">
+    <package name="components.layout.Frame">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="Frame.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/layout/Frame/Frame.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="13" count="450" type="stmt"/>
+        <line num="16" count="27000" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.ui.Button">
+      <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Button/Button.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="128" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.ui.RadioButton">
       <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="RadioButton.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/RadioButton/RadioButton.tsx">
+      <file name="RadioButton.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/RadioButton/RadioButton.tsx">
         <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="160" type="stmt"/>
         <line num="19" count="160" type="stmt"/>
@@ -129,9 +129,9 @@
         <line num="45" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.RangeInput">
+    <package name="components.ui.RangeInput">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="RangeInput.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/RangeInput/RangeInput.tsx">
+      <file name="RangeInput.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/RangeInput/RangeInput.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
@@ -139,9 +139,9 @@
         <line num="32" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.Shape">
+    <package name="components.ui.Shape">
       <metrics statements="16" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
-      <file name="Shape.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/Shape/Shape.tsx">
+      <file name="Shape.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Shape/Shape.tsx">
         <metrics statements="16" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>

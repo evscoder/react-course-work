@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">79.16% </span>
+                <span class="strong">81.48% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/24</span>
+                <span class='fraction'>22/27</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.26% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/23</span>
+                <span class='fraction'>20/25</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,7 +112,12 @@
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -120,7 +125,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -129,16 +137,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -150,6 +154,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,33 +171,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {FC, useEffect, useRef} from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {FC, useRef} from 'react';
 import styles from './Game.module.scss';
 import Interface from '../Interface/Interface';
 import {useDispatch, useSelector} from "react-redux";
 import {
-    createArray,
     gameCreate,
 } from "../../../redux/gameSlice";
 import {RootState} from "../../../redux/store";
 import Frame from "../../layout/Frame/Frame";
+import Modal from "../../ui/Modal/Modal";
+import ModalDismissButton from "../../ui/Modal/ModalDismissButton";
+import Help from "../../layout/Help/Help";
+import useGameEvolve from "../../../hooks/useGameTheme";
 &nbsp;
 interface Props {
     title?: string
 }
 &nbsp;
 const Game: FC&lt;Props&gt; = () =&gt; {
-    const { cellsActive, gridSize, theme, evolve, grid, shape, color } = useSelector((state: RootState) =&gt; state.gameSlice);
+    const { isShowModal } = useSelector((state: RootState) =&gt; state.modalSlice);
+    const { gridSize, cellsActive, grid, shape, color } = useSelector((state: RootState) =&gt; state.gameSlice);
     const dispatch = useDispatch();
     const gameElement = useRef&lt;HTMLDivElement&gt;(null);
     const frameElement = useRef&lt;HTMLTableElement&gt;(null);
 &nbsp;
-    useEffect(() =&gt; {
-        if (!evolve) {
-            document.body.dataset.mode = theme ? 'light' : 'dark';
-            dispatch(createArray());
-        }
-    }, [gridSize]);
+    useGameEvolve([gridSize]);
 &nbsp;
     const onCreate = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
         const table = <span class="cstat-no" title="statement not covered" >frameElement.current as HTMLDivElement;</span>
@@ -205,6 +214,12 @@ const Game: FC&lt;Props&gt; = () =&gt; {
                 gameElement={gameElement.current}
                 onCreate={onCreate}
             /&gt;
+            &lt;Modal isShow={isShowModal} classNames={styles['demo-panel']} type={'compact'}
+               content={&lt;Help /&gt;}
+               footer={
+                   &lt;ModalDismissButton color={color}&gt;Close&lt;/ModalDismissButton&gt;
+               }
+            /&gt;
         &lt;/div&gt;
     );
 };
@@ -217,7 +232,7 @@ export default Game;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-11-11T11:18:37.264Z
+                at 2023-11-11T16:48:18.760Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

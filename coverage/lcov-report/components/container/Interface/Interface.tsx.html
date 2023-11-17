@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95% </span>
+                <span class="strong">96.77% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/20</span>
+                <span class='fraction'>30/31</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.73% </span>
+                <span class="strong">96.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/19</span>
+                <span class='fraction'>29/30</span>
             </div>
         
             
@@ -193,17 +193,28 @@
 <a name='L128'></a><a href='#L128'>128</a>
 <a name='L129'></a><a href='#L129'>129</a>
 <a name='L130'></a><a href='#L130'>130</a>
-<a name='L131'></a><a href='#L131'>131</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,11 +222,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -225,7 +233,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">32x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
@@ -323,11 +335,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {FC} from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {FC, useRef} from 'react';
 import styles from './Interface.module.scss';
 import cn from 'clsx';
 import Button from "../../ui/Button/Button";
-import RangeInput from "../../ui/RangeInput/RangeInput";
 import RadioButton from "../../ui/RadioButton/RadioButton";
 import {
     gameToggleGrid, gameToggleTheme
@@ -335,17 +346,19 @@ import {
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../../redux/store";
 import {toggleModal} from "../../../redux/modalSlice";
+import ButtonSize from "../ButtonSize/ButtonSize";
+import usePauseEvolve from "../../../hooks/usePauseEvolve";
+import useStartEvolve from "../../../hooks/useStartEvolve";
+import useEvolve from "../../../hooks/useEvolve";
+import useResetGame from "../../../hooks/useResetGame";
+import SpeedInputControl from "../SpeedInputControl/SpeedInputControl";
 &nbsp;
 interface Props {
     gameElement: HTMLDivElement | null,
     onCreate: () =&gt; void
-    onChangeSpeed: (event: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; void
-    onEvolve: () =&gt; void
-    onReset: () =&gt; void
-    onChangeSize: (event: React.ChangeEvent&lt;HTMLButtonElement&gt;) =&gt; void
 }
 &nbsp;
-const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate, onChangeSpeed, onEvolve, onReset, onChangeSize}) =&gt; {
+const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate}) =&gt; {
     const {
         evolve,
         theme,
@@ -353,10 +366,15 @@ const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate, onChangeSpeed, o
         shape,
         color,
         activeShape,
-        grid
+        grid,
+        timeSpeed
     } = useSelector((state: RootState) =&gt; state.gameSlice);
-&nbsp;
+    const evolveTimeId = useRef&lt;any&gt;(null);
     const dispatch = useDispatch();
+    const pauseEvolve = usePauseEvolve(evolveTimeId);
+    const startEvolve = useStartEvolve(evolveTimeId);
+    const onEvolve = useEvolve(pauseEvolve, startEvolve);
+    const onReset = useResetGame(pauseEvolve);
 &nbsp;
     const onToggleTheme = (): void =&gt; {
         dispatch(gameToggleTheme(!theme));
@@ -375,13 +393,13 @@ const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate, onChangeSpeed, o
             &lt;div className={styles.giSizes}&gt;
                 &lt;div className={styles.giRow}&gt;
                     &lt;div className={styles.giCol}&gt;
-                        &lt;Button id={'1x'} size={'10_20'} title={'Grid size'} color={color} onClick={onChangeSize}&gt;1x&lt;/Button&gt;
+                        &lt;ButtonSize id={'1x'} size={'10_20'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId} timeSpeed={timeSpeed}&gt;1x&lt;/ButtonSize&gt;
                     &lt;/div&gt;
                     &lt;div className={styles.giCol}&gt;
-                        &lt;Button id={'2x'} size={'15_30'} title={'Grid size'} color={color} onClick={onChangeSize}&gt;2x&lt;/Button&gt;
+                        &lt;ButtonSize id={'2x'} size={'15_30'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId} timeSpeed={timeSpeed}&gt;2x&lt;/ButtonSize&gt;
                     &lt;/div&gt;
                     &lt;div className={styles.giCol}&gt;
-                        &lt;Button id={'3x'} size={'30_60'} title={'Grid size'} color={color} onClick={onChangeSize}&gt;3x&lt;/Button&gt;
+                        &lt;ButtonSize id={'3x'} size={'30_60'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId} timeSpeed={timeSpeed}&gt;3x&lt;/ButtonSize&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -396,7 +414,7 @@ const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate, onChangeSpeed, o
                     &lt;Button id={'reset'} title={'Kill all alive cells'} color={color} onClick={onReset} disabled={!start &amp;&amp; !activeShape}&gt;Reset&lt;/Button&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;RangeInput id={'speedInput'} onChange={onChangeSpeed} min={50} max={350} step={1} title={'Change evolution speed'} /&gt;
+                    &lt;SpeedInputControl id={'speedInput'} evolveTimeId={evolveTimeId} min={50} max={350} step={1} title={'Change evolution speed'} /&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
                     &lt;ul className={styles.giList}&gt;
@@ -460,7 +478,7 @@ export default GameInterface;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-11-13T16:05:36.145Z
+                at 2023-11-17T19:54:22.583Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

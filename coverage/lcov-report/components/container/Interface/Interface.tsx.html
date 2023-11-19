@@ -197,9 +197,7 @@
 <a name='L132'></a><a href='#L132'>132</a>
 <a name='L133'></a><a href='#L133'>133</a>
 <a name='L134'></a><a href='#L134'>134</a>
-<a name='L135'></a><a href='#L135'>135</a>
-<a name='L136'></a><a href='#L136'>136</a>
-<a name='L137'></a><a href='#L137'>137</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L135'></a><a href='#L135'>135</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -221,7 +219,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -231,28 +228,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">32x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -338,27 +334,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {FC, useRef} from 'react';
 import styles from './Interface.module.scss';
 import cn from 'clsx';
-import Button from "../../ui/Button/Button";
-import RadioButton from "../../ui/RadioButton/RadioButton";
+import Button from '../../ui/Button/Button';
+import RadioButton from '../../ui/RadioButton/RadioButton';
 import {
     gameToggleGrid, gameToggleTheme
-} from "../../../redux/gameSlice";
-import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../../../redux/store";
-import {toggleModal} from "../../../redux/modalSlice";
-import ButtonSize from "../ButtonSize/ButtonSize";
-import usePauseEvolve from "../../../hooks/usePauseEvolve";
-import useStartEvolve from "../../../hooks/useStartEvolve";
-import useEvolve from "../../../hooks/useEvolve";
-import useResetGame from "../../../hooks/useResetGame";
-import SpeedInputControl from "../SpeedInputControl/SpeedInputControl";
+} from '../../../redux/gameSlice';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '../../../redux/store';
+import {toggleModal} from '../../../redux/modalSlice';
+import ButtonSize from '../ButtonSize/ButtonSize';
+import usePauseEvolve from '../../../hooks/usePauseEvolve';
+import useStartEvolve from '../../../hooks/useStartEvolve';
+import useEvolve from '../../../hooks/useEvolve';
+import useResetGame from '../../../hooks/useResetGame';
+import SpeedInputControl from '../SpeedInputControl/SpeedInputControl';
 &nbsp;
 interface Props {
-    gameElement: HTMLDivElement | null,
     onCreate: () =&gt; void
 }
 &nbsp;
-const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate}) =&gt; {
+const GameInterface: FC&lt;Props&gt; = ({onCreate}) =&gt; {
     const {
         evolve,
         theme,
@@ -366,8 +361,7 @@ const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate}) =&gt; {
         shape,
         color,
         activeShape,
-        grid,
-        timeSpeed
+        grid
     } = useSelector((state: RootState) =&gt; state.gameSlice);
     const evolveTimeId = useRef&lt;any&gt;(null);
     const dispatch = useDispatch();
@@ -393,13 +387,13 @@ const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate}) =&gt; {
             &lt;div className={styles.giSizes}&gt;
                 &lt;div className={styles.giRow}&gt;
                     &lt;div className={styles.giCol}&gt;
-                        &lt;ButtonSize id={'1x'} size={'10_20'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId} timeSpeed={timeSpeed}&gt;1x&lt;/ButtonSize&gt;
+                        &lt;ButtonSize id={'1x'} size={'10_20'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId}&gt;1x&lt;/ButtonSize&gt;
                     &lt;/div&gt;
                     &lt;div className={styles.giCol}&gt;
-                        &lt;ButtonSize id={'2x'} size={'15_30'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId} timeSpeed={timeSpeed}&gt;2x&lt;/ButtonSize&gt;
+                        &lt;ButtonSize id={'2x'} size={'15_30'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId}&gt;2x&lt;/ButtonSize&gt;
                     &lt;/div&gt;
                     &lt;div className={styles.giCol}&gt;
-                        &lt;ButtonSize id={'3x'} size={'30_60'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId} timeSpeed={timeSpeed}&gt;3x&lt;/ButtonSize&gt;
+                        &lt;ButtonSize id={'3x'} size={'30_60'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId}&gt;3x&lt;/ButtonSize&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -419,13 +413,13 @@ const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate}) =&gt; {
                 &lt;div className={styles.giCol}&gt;
                     &lt;ul className={styles.giList}&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} id={'square'} type={'square'} color={color} title={'Squared cells'} name={'grid_type'} /&gt;
+                            &lt;RadioButton id={'square'} type={'square'} color={color} title={'Squared cells'} name={'grid_type'} /&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} id={'circle'} type={'circle'} color={color} title={'Circular cells'} name={'grid_type'} /&gt;
+                            &lt;RadioButton id={'circle'} type={'circle'} color={color} title={'Circular cells'} name={'grid_type'} /&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} id={'triangle'} type={'triangle'} color={color} title={'Triangular cells'} name={'grid_type'} /&gt;
+                            &lt;RadioButton id={'triangle'} type={'triangle'} color={color} title={'Triangular cells'} name={'grid_type'} /&gt;
                         &lt;/li&gt;
                     &lt;/ul&gt;
                 &lt;/div&gt;
@@ -438,25 +432,25 @@ const GameInterface: FC&lt;Props&gt; = ({gameElement, onCreate}) =&gt; {
                 &lt;div className={styles.giCol}&gt;
                     &lt;ul className={cn(styles.giList, styles.giListColors)}&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} type={shape} id={'purple'} color={'purple'} title={'Purple cells'} name={'color_type'} /&gt;
+                            &lt;RadioButton type={shape} id={'purple'} color={'purple'} title={'Purple cells'} name={'color_type'} /&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} type={shape} id={'pink'} color={'pink'} title={'Pink cells'} name={'color_type'}/&gt;
+                            &lt;RadioButton type={shape} id={'pink'} color={'pink'} title={'Pink cells'} name={'color_type'}/&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} type={shape} id={'blue'} color={'blue'} title={'Blue cells'} name={'color_type'} /&gt;
+                            &lt;RadioButton type={shape} id={'blue'} color={'blue'} title={'Blue cells'} name={'color_type'} /&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} type={shape} id={'green'} color={'green'} title={'Green cells'} name={'color_type'} /&gt;
+                            &lt;RadioButton type={shape} id={'green'} color={'green'} title={'Green cells'} name={'color_type'} /&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} type={shape} id={'yellow'} color={'yellow'} title={'Yellow cells'} name={'color_type'} /&gt;
+                            &lt;RadioButton type={shape} id={'yellow'} color={'yellow'} title={'Yellow cells'} name={'color_type'} /&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} type={shape} id={'white'} color={'white'} title={'White cells'} name={'color_type'} /&gt;
+                            &lt;RadioButton type={shape} id={'white'} color={'white'} title={'White cells'} name={'color_type'} /&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton gameElement={gameElement} id={'emoji'} color={'emoji'} title={'Type emoji or character for cells'} name={'color_type'} /&gt;
+                            &lt;RadioButton id={'emoji'} color={'emoji'} title={'Type emoji or character for cells'} name={'color_type'} /&gt;
                         &lt;/li&gt;
                     &lt;/ul&gt;
                 &lt;/div&gt;
@@ -478,7 +472,7 @@ export default GameInterface;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-11-19T16:37:03.889Z
+                at 2023-11-19T17:08:05.139Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

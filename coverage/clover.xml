@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1700411823913" clover="3.2.0">
-  <project timestamp="1700411823913" name="All files">
+<coverage generated="1700413685160" clover="3.2.0">
+  <project timestamp="1700413685160" name="All files">
     <metrics statements="364" coveredstatements="234" conditionals="79" coveredconditionals="25" methods="63" coveredmethods="39" elements="506" coveredelements="298" complexity="0" loc="364" ncloc="364" packages="13" files="22" classes="22"/>
     <package name="components.container.ButtonSize">
       <metrics statements="28" coveredstatements="17" conditionals="5" coveredconditionals="0" methods="5" coveredmethods="2"/>
@@ -13,27 +13,27 @@
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="96" type="stmt"/>
-        <line num="19" count="48" type="stmt"/>
-        <line num="20" count="48" type="stmt"/>
-        <line num="21" count="48" type="stmt"/>
-        <line num="22" count="48" type="stmt"/>
-        <line num="23" count="48" type="stmt"/>
-        <line num="25" count="48" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="102" type="stmt"/>
+        <line num="18" count="51" type="stmt"/>
+        <line num="19" count="51" type="stmt"/>
+        <line num="20" count="51" type="stmt"/>
+        <line num="21" count="51" type="stmt"/>
+        <line num="22" count="51" type="stmt"/>
+        <line num="24" count="51" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="34" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="38" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="42" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="50" count="48" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
+        <line num="49" count="51" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.container.Game">
@@ -51,13 +51,13 @@
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="32" type="stmt"/>
-        <line num="19" count="32" type="stmt"/>
-        <line num="20" count="16" type="stmt"/>
-        <line num="21" count="16" type="stmt"/>
-        <line num="23" count="16" type="stmt"/>
-        <line num="25" count="16" type="stmt"/>
-        <line num="27" count="16" type="stmt"/>
+        <line num="18" count="34" type="stmt"/>
+        <line num="19" count="34" type="stmt"/>
+        <line num="20" count="17" type="stmt"/>
+        <line num="21" count="17" type="stmt"/>
+        <line num="23" count="17" type="stmt"/>
+        <line num="25" count="17" type="stmt"/>
+        <line num="27" count="17" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
       </file>
     </package>
@@ -79,22 +79,22 @@
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="34" count="32" type="stmt"/>
-        <line num="35" count="16" type="stmt"/>
-        <line num="36" count="16" type="stmt"/>
-        <line num="37" count="16" type="stmt"/>
-        <line num="38" count="16" type="stmt"/>
-        <line num="39" count="16" type="stmt"/>
-        <line num="40" count="16" type="stmt"/>
-        <line num="42" count="16" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="46" count="16" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="50" count="16" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="54" count="16" type="stmt"/>
-        <line num="136" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="32" count="34" type="stmt"/>
+        <line num="33" count="17" type="stmt"/>
+        <line num="34" count="17" type="stmt"/>
+        <line num="35" count="17" type="stmt"/>
+        <line num="36" count="17" type="stmt"/>
+        <line num="37" count="17" type="stmt"/>
+        <line num="38" count="17" type="stmt"/>
+        <line num="40" count="17" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="44" count="17" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="17" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="52" count="17" type="stmt"/>
+        <line num="134" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.container.SpeedInputControl">
@@ -107,17 +107,17 @@
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="14" count="32" type="stmt"/>
-        <line num="15" count="16" type="stmt"/>
-        <line num="16" count="16" type="stmt"/>
-        <line num="17" count="16" type="stmt"/>
-        <line num="19" count="16" type="stmt"/>
+        <line num="14" count="34" type="stmt"/>
+        <line num="15" count="17" type="stmt"/>
+        <line num="16" count="17" type="stmt"/>
+        <line num="17" count="17" type="stmt"/>
+        <line num="19" count="17" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="25" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="30" count="16" type="stmt"/>
+        <line num="30" count="17" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
       </file>
     </package>
@@ -129,9 +129,9 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
-        <line num="13" count="450" type="stmt"/>
-        <line num="16" count="27000" type="stmt"/>
+        <line num="10" count="17" type="stmt"/>
+        <line num="13" count="480" type="stmt"/>
+        <line num="16" count="28800" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
       </file>
     </package>
@@ -141,7 +141,7 @@
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
+        <line num="4" count="17" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
       </file>
     </package>
@@ -154,13 +154,13 @@
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="160" type="cond" truecount="3" falsecount="1"/>
-        <line num="9" count="160" type="stmt"/>
-        <line num="10" count="160" type="cond" truecount="0" falsecount="1"/>
+        <line num="8" count="170" type="cond" truecount="3" falsecount="1"/>
+        <line num="9" count="170" type="stmt"/>
+        <line num="10" count="170" type="cond" truecount="0" falsecount="1"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="20" count="160" type="stmt"/>
-        <line num="27" count="160" type="stmt"/>
+        <line num="20" count="170" type="stmt"/>
+        <line num="27" count="170" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
       </file>
     </package>
@@ -174,9 +174,9 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="20" count="32" type="stmt"/>
-        <line num="22" count="16" type="stmt"/>
-        <line num="24" count="16" type="stmt"/>
+        <line num="20" count="34" type="stmt"/>
+        <line num="22" count="17" type="stmt"/>
+        <line num="24" count="17" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
       </file>
       <file name="ModalDismissButton.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Modal/ModalDismissButton.tsx">
@@ -185,8 +185,8 @@
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="16" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
+        <line num="8" count="17" type="stmt"/>
+        <line num="10" count="17" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
     </package>
@@ -199,19 +199,19 @@
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="160" type="stmt"/>
-        <line num="20" count="160" type="stmt"/>
-        <line num="22" count="160" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="170" type="stmt"/>
+        <line num="19" count="170" type="stmt"/>
+        <line num="21" count="170" type="stmt"/>
+        <line num="22" count="9" type="stmt"/>
         <line num="23" count="9" type="stmt"/>
         <line num="24" count="9" type="stmt"/>
         <line num="25" count="9" type="stmt"/>
-        <line num="26" count="9" type="stmt"/>
+        <line num="27" count="9" type="stmt"/>
         <line num="28" count="9" type="stmt"/>
-        <line num="29" count="9" type="stmt"/>
-        <line num="31" count="9" type="stmt"/>
-        <line num="37" count="160" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
+        <line num="30" count="9" type="stmt"/>
+        <line num="36" count="170" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.ui.RangeInput">
@@ -221,7 +221,7 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
       </file>
     </package>
@@ -235,15 +235,15 @@
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="13" count="27000" type="stmt"/>
-        <line num="14" count="27000" type="stmt"/>
-        <line num="16" count="27000" type="stmt"/>
+        <line num="13" count="28800" type="stmt"/>
+        <line num="14" count="28800" type="stmt"/>
+        <line num="16" count="28800" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
-        <line num="25" count="27000" type="stmt"/>
+        <line num="25" count="28800" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
       </file>
     </package>
@@ -254,8 +254,8 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="32" type="stmt"/>
-        <line num="7" count="32" type="stmt"/>
+        <line num="5" count="34" type="stmt"/>
+        <line num="7" count="34" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -266,26 +266,26 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="16" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
+        <line num="5" count="17" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="15" count="16" type="stmt"/>
+        <line num="15" count="17" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
       <file name="useEvolve.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useEvolve.tsx">
         <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="32" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
+        <line num="5" count="34" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
         <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="14" count="16" type="stmt"/>
+        <line num="14" count="17" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
       <file name="useGameTheme.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useGameTheme.tsx">
@@ -294,12 +294,12 @@
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="7" count="32" type="stmt"/>
-        <line num="8" count="16" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
-        <line num="11" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="3" type="stmt"/>
+        <line num="7" count="34" type="stmt"/>
+        <line num="8" count="17" type="stmt"/>
+        <line num="10" count="17" type="stmt"/>
+        <line num="11" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="4" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
       <file name="usePauseEvolve.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/usePauseEvolve.tsx">
@@ -307,11 +307,11 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="64" type="stmt"/>
-        <line num="7" count="64" type="stmt"/>
+        <line num="5" count="68" type="stmt"/>
+        <line num="7" count="68" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="12" count="64" type="stmt"/>
+        <line num="12" count="68" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
       <file name="useResetGame.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useResetGame.tsx">
@@ -319,12 +319,12 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="64" type="stmt"/>
-        <line num="7" count="64" type="stmt"/>
+        <line num="5" count="68" type="stmt"/>
+        <line num="7" count="68" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="13" count="64" type="stmt"/>
+        <line num="13" count="68" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
       </file>
       <file name="useStartEvolve.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useStartEvolve.tsx">
@@ -332,13 +332,13 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="160" type="stmt"/>
-        <line num="7" count="80" type="stmt"/>
-        <line num="9" count="80" type="stmt"/>
+        <line num="6" count="170" type="stmt"/>
+        <line num="7" count="85" type="stmt"/>
+        <line num="9" count="85" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="15" count="80" type="stmt"/>
+        <line num="15" count="85" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
     </package>
@@ -349,18 +349,18 @@
         <line num="1" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="38" count="3" type="stmt"/>
-        <line num="39" count="3" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
-        <line num="42" count="90" type="stmt"/>
-        <line num="43" count="90" type="stmt"/>
-        <line num="45" count="90" type="stmt"/>
-        <line num="46" count="5400" type="stmt"/>
-        <line num="47" count="5400" type="stmt"/>
-        <line num="51" count="3" type="stmt"/>
-        <line num="52" count="3" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="42" count="120" type="stmt"/>
+        <line num="43" count="120" type="stmt"/>
+        <line num="45" count="120" type="stmt"/>
+        <line num="46" count="7200" type="stmt"/>
+        <line num="47" count="7200" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="52" count="4" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="57" count="0" type="stmt"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1700467634854" clover="3.2.0">
-  <project timestamp="1700467634854" name="All files">
-    <metrics statements="364" coveredstatements="234" conditionals="79" coveredconditionals="25" methods="63" coveredmethods="39" elements="506" coveredelements="298" complexity="0" loc="364" ncloc="364" packages="13" files="22" classes="22"/>
+<coverage generated="1701957630480" clover="3.2.0">
+  <project timestamp="1701957630480" name="All files">
+    <metrics statements="339" coveredstatements="211" conditionals="78" coveredconditionals="24" methods="59" coveredmethods="36" elements="476" coveredelements="271" complexity="0" loc="339" ncloc="339" packages="13" files="20" classes="20"/>
     <package name="components.container.ButtonSize">
       <metrics statements="28" coveredstatements="17" conditionals="5" coveredconditionals="0" methods="5" coveredmethods="2"/>
       <file name="ButtonSize.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/container/ButtonSize/ButtonSize.tsx">
@@ -37,9 +37,9 @@
       </file>
     </package>
     <package name="components.container.Game">
-      <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <metrics statements="25" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="2"/>
       <file name="Game.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/container/Game/Game.tsx">
-        <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <metrics statements="25" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -51,20 +51,26 @@
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="34" type="stmt"/>
+        <line num="18" count="17" type="stmt"/>
         <line num="19" count="34" type="stmt"/>
         <line num="20" count="17" type="stmt"/>
         <line num="21" count="17" type="stmt"/>
         <line num="23" count="17" type="stmt"/>
         <line num="25" count="17" type="stmt"/>
         <line num="27" count="17" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="17" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="17" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.container.Interface">
-      <metrics statements="30" coveredstatements="29" conditionals="10" coveredconditionals="9" methods="5" coveredmethods="4"/>
+      <metrics statements="27" coveredstatements="27" conditionals="10" coveredconditionals="9" methods="4" coveredmethods="4"/>
       <file name="Interface.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/container/Interface/Interface.tsx">
-        <metrics statements="30" coveredstatements="29" conditionals="10" coveredconditionals="9" methods="5" coveredmethods="4"/>
+        <metrics statements="27" coveredstatements="27" conditionals="10" coveredconditionals="9" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -78,7 +84,6 @@
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="32" count="34" type="stmt"/>
         <line num="33" count="17" type="stmt"/>
@@ -90,11 +95,9 @@
         <line num="40" count="17" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
         <line num="44" count="17" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
         <line num="48" count="17" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="52" count="17" type="stmt"/>
-        <line num="134" count="1" type="stmt"/>
+        <line num="130" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.container.SpeedInputControl">
@@ -165,29 +168,22 @@
       </file>
     </package>
     <package name="components.ui.Modal">
-      <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <file name="Modal.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Modal/Modal.tsx">
-        <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="20" count="34" type="stmt"/>
-        <line num="22" count="17" type="stmt"/>
-        <line num="24" count="17" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
+        <line num="20" count="17" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
       </file>
       <file name="ModalDismissButton.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Modal/ModalDismissButton.tsx">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="17" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
         <line num="10" count="17" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="12" count="17" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.ui.RadioButton">
@@ -248,48 +244,34 @@
       </file>
     </package>
     <package name="hooks">
-      <metrics statements="71" coveredstatements="52" conditionals="5" coveredconditionals="3" methods="19" coveredmethods="11"/>
-      <file name="useCloseModal.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useCloseModal.tsx">
-        <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="34" type="stmt"/>
-        <line num="7" count="34" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-      </file>
+      <metrics statements="57" coveredstatements="41" conditionals="4" coveredconditionals="2" methods="16" coveredmethods="10"/>
       <file name="useCreate.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useCreate.tsx">
-        <metrics statements="12" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="11" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="17" type="stmt"/>
-        <line num="6" count="17" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
+        <line num="7" count="17" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="17" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
       </file>
       <file name="useEvolve.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useEvolve.tsx">
-        <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="34" type="stmt"/>
-        <line num="6" count="17" type="stmt"/>
-        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="14" count="17" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="7" count="17" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
       </file>
       <file name="useGameTheme.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useGameTheme.tsx">
-        <metrics statements="11" coveredstatements="11" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -297,13 +279,12 @@
         <line num="7" count="34" type="stmt"/>
         <line num="8" count="17" type="stmt"/>
         <line num="10" count="17" type="stmt"/>
-        <line num="11" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="4" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
       </file>
       <file name="usePauseEvolve.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/usePauseEvolve.tsx">
-        <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -311,11 +292,10 @@
         <line num="7" count="68" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="12" count="68" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
       </file>
       <file name="useResetGame.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useResetGame.tsx">
-        <metrics statements="10" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -324,8 +304,7 @@
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="13" count="68" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
       <file name="useStartEvolve.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useStartEvolve.tsx">
         <metrics statements="11" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
@@ -343,7 +322,7 @@
       </file>
     </package>
     <package name="redux">
-      <metrics statements="117" coveredstatements="30" conditionals="41" coveredconditionals="1" methods="13" coveredmethods="4"/>
+      <metrics statements="110" coveredstatements="25" conditionals="41" coveredconditionals="1" methods="12" coveredmethods="4"/>
       <file name="gameSlice.tsx" path="/home/runner/work/react-course-work/react-course-work/src/redux/gameSlice.tsx">
         <metrics statements="107" coveredstatements="22" conditionals="41" coveredconditionals="1" methods="12" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
@@ -454,21 +433,11 @@
         <line num="221" count="1" type="stmt"/>
         <line num="235" count="1" type="stmt"/>
       </file>
-      <file name="modalSlice.tsx" path="/home/runner/work/react-course-work/react-course-work/src/redux/modalSlice.tsx">
-        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-      </file>
       <file name="store.tsx" path="/home/runner/work/react-course-work/react-course-work/src/redux/store.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
     </package>
   </project>

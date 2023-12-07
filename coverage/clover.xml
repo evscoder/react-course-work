@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701963426481" clover="3.2.0">
-  <project timestamp="1701963426481" name="All files">
+<coverage generated="1701975965425" clover="3.2.0">
+  <project timestamp="1701975965425" name="All files">
     <metrics statements="341" coveredstatements="212" conditionals="78" coveredconditionals="24" methods="60" coveredmethods="36" elements="479" coveredelements="272" complexity="0" loc="341" ncloc="341" packages="13" files="20" classes="20"/>
     <package name="components.container.ButtonSize">
       <metrics statements="28" coveredstatements="17" conditionals="5" coveredconditionals="0" methods="5" coveredmethods="2"/>
@@ -143,7 +143,7 @@
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="17" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.ui.Button">

@@ -375,47 +375,47 @@ const GameInterface: FC&lt;Props&gt; = ({onCreate, toggleHelp}) =&gt; {
             &lt;div className={styles.giSizes}&gt;
                 &lt;div className={styles.giRow}&gt;
                     &lt;div className={styles.giCol}&gt;
-                        &lt;ButtonSize id={'1x'} size={'10_20'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId}&gt;1x&lt;/ButtonSize&gt;
+                        &lt;ButtonSize id={'1x'} size={'10_20'} title={'Размер поля 10 на 20'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId}&gt;1x&lt;/ButtonSize&gt;
                     &lt;/div&gt;
                     &lt;div className={styles.giCol}&gt;
-                        &lt;ButtonSize id={'2x'} size={'15_30'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId}&gt;2x&lt;/ButtonSize&gt;
+                        &lt;ButtonSize id={'2x'} size={'15_30'} title={'Размер поля 15 на 30'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId}&gt;2x&lt;/ButtonSize&gt;
                     &lt;/div&gt;
                     &lt;div className={styles.giCol}&gt;
-                        &lt;ButtonSize id={'3x'} size={'30_60'} title={'Grid size'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId}&gt;3x&lt;/ButtonSize&gt;
+                        &lt;ButtonSize id={'3x'} size={'30_60'} title={'Размер поля 30 на 60'} color={color} onCreate={onCreate} evolveTimeId={evolveTimeId}&gt;3x&lt;/ButtonSize&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div className={styles.giRow}&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'create'} title={'Make random alive cells'} color={color} onClick={onCreate} disabled={evolve}&gt;Create&lt;/Button&gt;
+                    &lt;Button id={'create'} title={'Создать клетки'} color={color} onClick={onCreate} disabled={evolve}&gt;Create&lt;/Button&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'evolve'} title={'Start alive cells evolution'} color={color} onClick={onEvolve} disabled={!start &amp;&amp; !activeShape}&gt;{evolve ? <span class="branch-0 cbranch-no" title="branch not covered" >'Stop' </span>: 'Evolve'}&lt;/Button&gt;
+                    &lt;Button id={'evolve'} title={'Запустить движение'} color={color} onClick={onEvolve} disabled={!start &amp;&amp; !activeShape}&gt;{evolve ? <span class="branch-0 cbranch-no" title="branch not covered" >'Stop' </span>: 'Evolve'}&lt;/Button&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'reset'} title={'Kill all alive cells'} color={color} onClick={onReset} disabled={!start &amp;&amp; !activeShape}&gt;Reset&lt;/Button&gt;
+                    &lt;Button id={'reset'} title={'Очистить поле'} color={color} onClick={onReset} disabled={!start &amp;&amp; !activeShape}&gt;Reset&lt;/Button&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;SpeedInputControl id={'speedInput'} evolveTimeId={evolveTimeId} min={50} max={350} step={1} title={'Change evolution speed'} /&gt;
+                    &lt;SpeedInputControl id={'speedInput'} evolveTimeId={evolveTimeId} min={50} max={350} step={1} title={'Регулировать скорость клеток'} /&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
                     &lt;ul className={styles.giList}&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton id={'square'} type={'square'} color={color} title={'Squared cells'} name={'grid_type'} /&gt;
+                            &lt;RadioButton id={'square'} type={'square'} color={color} title={'Квадратные клетки'} name={'grid_type'} /&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton id={'circle'} type={'circle'} color={color} title={'Circular cells'} name={'grid_type'} /&gt;
+                            &lt;RadioButton id={'circle'} type={'circle'} color={color} title={'Круглые клетки'} name={'grid_type'} /&gt;
                         &lt;/li&gt;
                         &lt;li className={styles.giListItem}&gt;
-                            &lt;RadioButton id={'triangle'} type={'triangle'} color={color} title={'Triangular cells'} name={'grid_type'} /&gt;
+                            &lt;RadioButton id={'triangle'} type={'triangle'} color={color} title={'Треугольные клетки'} name={'grid_type'} /&gt;
                         &lt;/li&gt;
                     &lt;/ul&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'btnGrid'} title={'Toggle grid'} color={color} onClick={onChangeGrid} &gt;Grid {grid ? 'on' : 'off'}&lt;/Button&gt;
+                    &lt;Button id={'btnGrid'} title={'Убрать сетку'} color={color} onClick={onChangeGrid} &gt;Grid {grid ? 'on' : 'off'}&lt;/Button&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'btnMode'} title={'Toggle mode'} color={color} onClick={onToggleTheme}&gt;{theme ? 'Dark' : 'Light'} mode&lt;/Button&gt;
+                    &lt;Button id={'btnMode'} title={'Переключить тему'} color={color} onClick={onToggleTheme}&gt;{theme ? 'Dark' : 'Light'} mode&lt;/Button&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
                     &lt;ul className={cn(styles.giList, styles.giListColors)}&gt;
@@ -445,7 +445,7 @@ const GameInterface: FC&lt;Props&gt; = ({onCreate, toggleHelp}) =&gt; {
             &lt;/div&gt;
             &lt;div className={styles.giRow}&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'btnHelp'} title={'Toggle Help'} color={color} onClick={toggleHelp}&gt;Help&lt;/Button&gt;
+                    &lt;Button id={'btnHelp'} title={'Легенда'} color={color} onClick={toggleHelp}&gt;Help&lt;/Button&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -460,7 +460,7 @@ export default GameInterface;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-12-07T19:08:37.844Z
+                at 2023-12-07T19:10:52.466Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

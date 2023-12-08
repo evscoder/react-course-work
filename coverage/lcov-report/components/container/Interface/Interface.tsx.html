@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>28/28</span>
+                <span class='fraction'>29/29</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>27/27</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
@@ -193,7 +193,22 @@
 <a name='L128'></a><a href='#L128'>128</a>
 <a name='L129'></a><a href='#L129'>129</a>
 <a name='L130'></a><a href='#L130'>130</a>
-<a name='L131'></a><a href='#L131'>131</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -203,6 +218,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -322,6 +338,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {FC, useRef} from 'react';
 import styles from './Interface.module.scss';
@@ -339,6 +369,7 @@ import useStartEvolve from '../../../hooks/useStartEvolve';
 import useEvolve from '../../../hooks/useEvolve';
 import useResetGame from '../../../hooks/useResetGame';
 import SpeedInputControl from '../SpeedInputControl/SpeedInputControl';
+import Tooltip from "../../ui/Tooltip/Tooltip";
 &nbsp;
 interface Props {
     onCreate: () =&gt; void,
@@ -387,16 +418,24 @@ const GameInterface: FC&lt;Props&gt; = ({onCreate, toggleHelp}) =&gt; {
             &lt;/div&gt;
             &lt;div className={styles.giRow}&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'create'} title={'Создать клетки'} color={color} onClick={onCreate} disabled={evolve}&gt;Create&lt;/Button&gt;
+                    &lt;Tooltip placement={'top'} content={&lt;&gt;Создать клетки&lt;/&gt;}&gt;
+                        &lt;Button id={'create'} color={color} onClick={onCreate} disabled={evolve}&gt;Create&lt;/Button&gt;
+                    &lt;/Tooltip&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'evolve'} title={'Запустить движение'} color={color} onClick={onEvolve} disabled={!start &amp;&amp; !activeShape}&gt;{evolve ? <span class="branch-0 cbranch-no" title="branch not covered" >'Stop' </span>: 'Evolve'}&lt;/Button&gt;
+                    &lt;Tooltip placement={'top'} content={&lt;&gt;Запустить движение&lt;/&gt;}&gt;
+                        &lt;Button id={'evolve'} color={color} onClick={onEvolve} disabled={!start &amp;&amp; !activeShape}&gt;{evolve ? <span class="branch-0 cbranch-no" title="branch not covered" >'Stop' </span>: 'Evolve'}&lt;/Button&gt;
+                    &lt;/Tooltip&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'reset'} title={'Очистить поле'} color={color} onClick={onReset} disabled={!start &amp;&amp; !activeShape}&gt;Reset&lt;/Button&gt;
+                    &lt;Tooltip placement={'top'} content={&lt;&gt;Очистить поле&lt;/&gt;}&gt;
+                        &lt;Button id={'reset'} color={color} onClick={onReset} disabled={!start &amp;&amp; !activeShape}&gt;Reset&lt;/Button&gt;
+                    &lt;/Tooltip&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;SpeedInputControl id={'speedInput'} evolveTimeId={evolveTimeId} min={50} max={350} step={1} title={'Регулировать скорость клеток'} /&gt;
+                    &lt;Tooltip placement={'top'} content={&lt;&gt;Регулировать скорость клеток&lt;/&gt;}&gt;
+                        &lt;SpeedInputControl id={'speedInput'} evolveTimeId={evolveTimeId} min={50} max={350} step={1} title={''} /&gt;
+                    &lt;/Tooltip&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
                     &lt;ul className={styles.giList}&gt;
@@ -412,10 +451,14 @@ const GameInterface: FC&lt;Props&gt; = ({onCreate, toggleHelp}) =&gt; {
                     &lt;/ul&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'btnGrid'} title={'Убрать сетку'} color={color} onClick={onChangeGrid} &gt;Grid {grid ? 'on' : 'off'}&lt;/Button&gt;
+                    &lt;Tooltip placement={'top'} content={&lt;&gt;Убрать сетку&lt;/&gt;}&gt;
+                        &lt;Button id={'btnGrid'} color={color} onClick={onChangeGrid} &gt;Grid {grid ? 'on' : 'off'}&lt;/Button&gt;
+                    &lt;/Tooltip&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'btnMode'} title={'Переключить тему'} color={color} onClick={onToggleTheme}&gt;{theme ? 'Dark' : 'Light'} mode&lt;/Button&gt;
+                    &lt;Tooltip placement={'top'} content={&lt;&gt;Переключить тему&lt;/&gt;}&gt;
+                        &lt;Button id={'btnMode'} color={color} onClick={onToggleTheme}&gt;{theme ? 'Dark' : 'Light'} mode&lt;/Button&gt;
+                    &lt;/Tooltip&gt;
                 &lt;/div&gt;
                 &lt;div className={styles.giCol}&gt;
                     &lt;ul className={cn(styles.giList, styles.giListColors)}&gt;
@@ -445,7 +488,9 @@ const GameInterface: FC&lt;Props&gt; = ({onCreate, toggleHelp}) =&gt; {
             &lt;/div&gt;
             &lt;div className={styles.giRow}&gt;
                 &lt;div className={styles.giCol}&gt;
-                    &lt;Button id={'btnHelp'} title={'Легенда'} color={color} onClick={toggleHelp}&gt;Help&lt;/Button&gt;
+                    &lt;Tooltip placement={'top'} content={&lt;&gt;Легенда&lt;/&gt;}&gt;
+                        &lt;Button id={'btnHelp'} color={color} onClick={toggleHelp}&gt;Help&lt;/Button&gt;
+                    &lt;/Tooltip&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -460,7 +505,7 @@ export default GameInterface;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-12-07T19:11:42.891Z
+                at 2023-12-08T07:40:40.459Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

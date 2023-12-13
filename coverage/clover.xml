@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702021240483" clover="3.2.0">
-  <project timestamp="1702021240483" name="All files">
+<coverage generated="1702453412863" clover="3.2.0">
+  <project timestamp="1702453412863" name="All files">
     <metrics statements="348" coveredstatements="219" conditionals="79" coveredconditionals="24" methods="61" coveredmethods="37" elements="488" coveredelements="280" complexity="0" loc="348" ncloc="348" packages="14" files="21" classes="21"/>
     <package name="components.container.ButtonSize">
       <metrics statements="29" coveredstatements="18" conditionals="5" coveredconditionals="0" methods="5" coveredmethods="2"/>
-      <file name="ButtonSize.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/container/ButtonSize/ButtonSize.tsx">
+      <file name="ButtonSize.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/container/ButtonSize/ButtonSize.tsx">
         <metrics statements="29" coveredstatements="18" conditionals="5" coveredconditionals="0" methods="5" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -39,7 +39,7 @@
     </package>
     <package name="components.container.Game">
       <metrics statements="23" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="2"/>
-      <file name="Game.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/container/Game/Game.tsx">
+      <file name="Game.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/container/Game/Game.tsx">
         <metrics statements="23" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -68,7 +68,7 @@
     </package>
     <package name="components.container.Interface">
       <metrics statements="28" coveredstatements="28" conditionals="10" coveredconditionals="9" methods="4" coveredmethods="4"/>
-      <file name="Interface.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/container/Interface/Interface.tsx">
+      <file name="Interface.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/container/Interface/Interface.tsx">
         <metrics statements="28" coveredstatements="28" conditionals="10" coveredconditionals="9" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -102,7 +102,7 @@
     </package>
     <package name="components.container.SpeedInputControl">
       <metrics statements="18" coveredstatements="13" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="2"/>
-      <file name="SpeedInputControl.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/container/SpeedInputControl/SpeedInputControl.tsx">
+      <file name="SpeedInputControl.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/container/SpeedInputControl/SpeedInputControl.tsx">
         <metrics statements="18" coveredstatements="13" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -126,7 +126,7 @@
     </package>
     <package name="components.layout.Frame">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="Frame.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/layout/Frame/Frame.tsx">
+      <file name="Frame.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/layout/Frame/Frame.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -140,7 +140,7 @@
     </package>
     <package name="components.layout.Help">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Help.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/layout/Help/Help.tsx">
+      <file name="Help.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/layout/Help/Help.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -150,7 +150,7 @@
     </package>
     <package name="components.ui.Button">
       <metrics statements="13" coveredstatements="11" conditionals="7" coveredconditionals="5" methods="2" coveredmethods="2"/>
-      <file name="Button.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Button/Button.tsx">
+      <file name="Button.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/ui/Button/Button.tsx">
         <metrics statements="13" coveredstatements="11" conditionals="7" coveredconditionals="5" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -169,7 +169,7 @@
     </package>
     <package name="components.ui.Modal">
       <metrics statements="14" coveredstatements="11" conditionals="6" coveredconditionals="4" methods="4" coveredmethods="2"/>
-      <file name="Modal.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Modal/Modal.tsx">
+      <file name="Modal.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/ui/Modal/Modal.tsx">
         <metrics statements="10" coveredstatements="7" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -182,7 +182,7 @@
         <line num="54" count="1" type="stmt"/>
         <line num="57" count="1" type="stmt"/>
       </file>
-      <file name="ModalDismissButton.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Modal/ModalDismissButton.tsx">
+      <file name="ModalDismissButton.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/ui/Modal/ModalDismissButton.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
@@ -192,7 +192,7 @@
     </package>
     <package name="components.ui.RadioButton">
       <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="RadioButton.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/RadioButton/RadioButton.tsx">
+      <file name="RadioButton.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/ui/RadioButton/RadioButton.tsx">
         <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -216,7 +216,7 @@
     </package>
     <package name="components.ui.RangeInput">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="RangeInput.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/RangeInput/RangeInput.tsx">
+      <file name="RangeInput.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/ui/RangeInput/RangeInput.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -227,7 +227,7 @@
     </package>
     <package name="components.ui.Shape">
       <metrics statements="16" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
-      <file name="Shape.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Shape/Shape.tsx">
+      <file name="Shape.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/ui/Shape/Shape.tsx">
         <metrics statements="16" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -249,7 +249,7 @@
     </package>
     <package name="components.ui.Tooltip">
       <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Tooltip.tsx" path="/home/runner/work/react-course-work/react-course-work/src/components/ui/Tooltip/Tooltip.tsx">
+      <file name="Tooltip.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/components/ui/Tooltip/Tooltip.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -260,7 +260,7 @@
     </package>
     <package name="hooks">
       <metrics statements="57" coveredstatements="41" conditionals="4" coveredconditionals="2" methods="16" coveredmethods="10"/>
-      <file name="useCreate.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useCreate.tsx">
+      <file name="useCreate.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/hooks/useCreate.tsx">
         <metrics statements="11" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -274,7 +274,7 @@
         <line num="13" count="0" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
-      <file name="useEvolve.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useEvolve.tsx">
+      <file name="useEvolve.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/hooks/useEvolve.tsx">
         <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -285,7 +285,7 @@
         <line num="11" count="0" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
       </file>
-      <file name="useGameTheme.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useGameTheme.tsx">
+      <file name="useGameTheme.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/hooks/useGameTheme.tsx">
         <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -298,7 +298,7 @@
         <line num="12" count="4" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
       </file>
-      <file name="usePauseEvolve.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/usePauseEvolve.tsx">
+      <file name="usePauseEvolve.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/hooks/usePauseEvolve.tsx">
         <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -309,7 +309,7 @@
         <line num="9" count="0" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
       </file>
-      <file name="useResetGame.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useResetGame.tsx">
+      <file name="useResetGame.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/hooks/useResetGame.tsx">
         <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -321,7 +321,7 @@
         <line num="10" count="0" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
-      <file name="useStartEvolve.tsx" path="/home/runner/work/react-course-work/react-course-work/src/hooks/useStartEvolve.tsx">
+      <file name="useStartEvolve.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/hooks/useStartEvolve.tsx">
         <metrics statements="11" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -338,7 +338,7 @@
     </package>
     <package name="redux">
       <metrics statements="110" coveredstatements="25" conditionals="41" coveredconditionals="1" methods="12" coveredmethods="4"/>
-      <file name="gameSlice.tsx" path="/home/runner/work/react-course-work/react-course-work/src/redux/gameSlice.tsx">
+      <file name="gameSlice.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/redux/gameSlice.tsx">
         <metrics statements="107" coveredstatements="22" conditionals="41" coveredconditionals="1" methods="12" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
@@ -448,7 +448,7 @@
         <line num="221" count="1" type="stmt"/>
         <line num="235" count="1" type="stmt"/>
       </file>
-      <file name="store.tsx" path="/home/runner/work/react-course-work/react-course-work/src/redux/store.tsx">
+      <file name="store.tsx" path="/home/runner/work/otus-course-work-react/otus-course-work-react/src/redux/store.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>

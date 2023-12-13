@@ -1,0 +1,35 @@
+:root {
+  --white-color: white;
+  --black-color: #292929;
+  --purple-color: #7c4de1;
+  --pink-color: hotpink;
+  --blue-color: #00d4ea;
+  --green-color: #45ee00;
+  --yellow-color: #ffd400;
+  --theme-light-color: var(--white-color);
+  --theme-dark-color: var(--black-color);
+  --gray-color: #6a6a6a;
+  --border-color: var(--gray-color);
+  --primary-color: var(--purple-color);
+  --emoji-happy: url(/emoji/happy-3.svg);
+
+  --backdrop-color: #7c4de1;
+  --backdrop-opacity: 0.22;
+  --control-background-hover: #141f27;
+  --border-grey-color: #333E4C;
+  --background-secondary-color: #fff;
+}
+
+[data-mode="dark"] {
+  --theme-light-color: var(--black-color);
+  --theme-dark-color: var(--white-color);
+  --hover-color: var(--white-color);
+}
+
+[data-mode="light"] {
+  --theme-light-color: var(--white-color);
+  --theme-dark-color: var(--black-color);
+  --hover-color: var(--white-color);
+}
+
+

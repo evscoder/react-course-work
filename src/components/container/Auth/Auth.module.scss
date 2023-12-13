@@ -1,0 +1,37 @@
+@import "../../../styles/variables";
+
+.auth {
+  flex-grow: 1;
+  display: grid;
+  color: var(--theme-dark-color);
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  background-color: var(--purple-color);
+  padding: 40px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(169, 194, 209, 0.25), 0 16px 32px rgba(169, 194, 209, 0.25);
+
+  &::before {
+    position: absolute;
+    background-color: green;
+  }
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+.btn {
+  min-width: 200px;
+}

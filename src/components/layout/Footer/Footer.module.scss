@@ -1,0 +1,17 @@
+@import "../../../styles/plugins";
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.credit {
+  color: var(--theme-dark-color);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: lowercase;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

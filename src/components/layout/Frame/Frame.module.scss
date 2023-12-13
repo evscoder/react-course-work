@@ -1,0 +1,27 @@
+@import "../../../styles/plugins";
+
+.frame {
+  --gap: 0;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-gap: var(--gap);
+  margin: ($gap * 1.25) auto ($gap * 2);
+  box-shadow: 0 4px 8px rgba(169, 194, 209, 0.0), 0 16px 32px rgba(169, 194, 209, 0.0);
+  transition: box-shadow 200ms ease-in;
+
+  &:hover {
+    [data-mode=light] & {
+      box-shadow: 0 4px 8px rgba(169, 194, 209, 0.25), 0 16px 32px rgba(169, 194, 209, 0.25);
+    }
+    [data-mode=dark] & {
+      box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.1), -16px 0px 32px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: var(--gap);
+  }
+}

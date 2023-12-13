@@ -1,0 +1,91 @@
+@import '../../../styles/plugins';
+
+.shape {
+  position: relative;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+
+  [data-grid=off] & {
+    border-color: transparent!important;
+  }
+
+  &::before {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+
+  &.is-circle {
+    border-radius: 50%;
+  }
+
+  &.is-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  &.is-dead {
+    background-color: transparent;
+  }
+
+  &.is-active {
+    background-color: var(--primary-color);
+
+    [data-shape='circle'] & {
+      border-radius: 50%;
+    }
+
+    [data-shape='triangle'] & {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    [data-color='purple'] & {
+      background-color: var(--purple-color);
+    }
+
+    [data-color='pink'] & {
+      background-color: var(--pink-color);
+    }
+
+    [data-color='blue'] & {
+      background-color: var(--blue-color);
+    }
+
+    [data-color='green'] & {
+      background-color: var(--green-color);
+    }
+
+    [data-color='yellow'] & {
+      background-color: var(--yellow-color);
+    }
+
+    [data-color='white'] & {
+      [data-mode="dark"] & {
+        background-color: var(--white-color);
+      }
+
+      [data-mode="light"] & {
+        background-color: var(--black-color);
+      }
+    }
+
+    [data-color='emoji'] & {
+      background-color: transparent;
+      clip-path: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        background-image: var(--emoji-happy);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

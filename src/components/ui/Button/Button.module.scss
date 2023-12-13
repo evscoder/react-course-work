@@ -1,0 +1,80 @@
+@import "../../../styles/plugins";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $btn_h;
+  background-color: var(--primary-color);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: $ff;
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 0.9rem;
+  padding: 0 ($gap * 0.85);
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-decoration: none;
+  transition: background-color 200ms, color 200ms, transform 200ms;
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &--secondary {
+    background-color: transparent;
+  }
+
+  &--purple {
+    background-color: var(--purple-color);
+  }
+
+  &--pink {
+    background-color: var(--pink-color);
+  }
+
+  &--blue {
+    background-color: var(--blue-color);
+  }
+
+  &--green {
+    color: var(--black-color);
+    background-color: var(--green-color);
+  }
+
+  &--yellow {
+    color: var(--black-color);
+    background-color: var(--yellow-color);
+  }
+
+  &--white {
+    [data-mode="dark"] & {
+      background-color: var(--white-color);
+      color: var(--black-color);
+    }
+
+    [data-mode="light"] & {
+      background-color: var(--black-color);
+      color: var(--white-color);
+    }
+  }
+
+  &:hover {
+    background-color: var(--hover-color);
+    color: var(--dark-color);
+    transform: scale(1.05);
+
+    [data-mode="dark"] & {
+      background-color: var(--white-color);
+      color: var(--black-color);
+    }
+
+    [data-mode="light"] & {
+      background-color: var(--black-color);
+      color: var(--white-color);
+    }
+  }
+}

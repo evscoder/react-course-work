@@ -1,0 +1,21 @@
+.game {
+  &[data-color=purple] {
+    --game-color: var(--purple-color);
+  }
+
+  &[data-color=pink] {
+    --game-color: var(--pink-color);
+  }
+
+  &[data-color=blue] {
+    --game-color: var(--blue-color);
+  }
+
+  &[data-color=green] {
+    --game-color: var(--green-color);
+  }
+
+  &[data-color=yellow] {
+    --game-color: var(--yellow-color);
+  }
+}
